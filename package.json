@@ -1,0 +1,13 @@
+{
+  "name": "mobile-audio-sync",
+  "version": "0.1.0",
+  "description": "Sincronía de reproducción de audio entre móviles: reloj de red + calibración.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server/time-server.js",
+    "test": "node --test test/*.test.js"
+  }
+}
