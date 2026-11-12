@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Elegir voz</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#111827}a:hover{color:#374151}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 16px 20px 24px; display: flex; flex-direction: column; gap: 14px; background: #F5F6F8; font-family: Inter, system-ui, sans-serif; color: #111827; overflow: hidden">
+
+<a href="Canciones.dc.html" style="align-self: flex-start; display: flex; align-items: center; gap: 4px; height: 44px; padding-right: 8px; font-size: 15px; font-weight: 600; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Canciones</a>
+
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', Inter, sans-serif; font-size: 26px; line-height: 32px; font-weight: 700; letter-spacing: -0.01em">[Título de la canción]</h1>
+<p style="margin: 0; font-size: 15px; line-height: 22px; color: #4B5563">Elige la voz que encaja con tu tesitura.</p>
+</div>
+
+<div style="display: flex; align-items: center; gap: 12px; padding: 14px; background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px">
+<div aria-hidden="true" style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: #F1F3F6; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg></div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 15px; line-height: 20px; font-weight: 700">¿No sabes cuál es tu voz?</div>
+<div style="font-size: 13px; line-height: 18px; color: #4B5563">Canta de grave a agudo durante un minuto. El audio no se guarda.</div>
+</div>
+<button type="button" style="flex: none; height: 44px; padding: 0 12px; border: 1px solid #111827; border-radius: 12px; background: #FFFFFF; font: 700 14px Inter, sans-serif; color: #111827">Probar</button>
+</div>
+
+<div role="radiogroup" aria-label="Voces" style="display: flex; flex-direction: column; gap: 8px">
+<sc-for list="{{voices}}" as="v" hint-placeholder-count="5">
+<div style="display: flex; gap: 8px">
+<button type="button" role="radio" aria-checked="{{v.checked}}" onClick="{{v.pick}}" style="flex: 1; min-width: 0; display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; text-align: left; border: 2px solid {{v.border}}; background: {{v.bg}}; border-radius: 14px; font-family: Inter, sans-serif; color: #111827; cursor: pointer">
+<span aria-hidden="true" style="flex: none; margin-top: 1px; width: 20px; height: 20px; box-sizing: border-box; border-radius: 50%; border: 2px solid {{v.dot}}; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{v.selected}}" hint-placeholder-val="{{ false }}"><span style="width: 10px; height: 10px; border-radius: 50%; background: #16A34A"></span></sc-if>
+</span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<span style="display: flex; justify-content: space-between; gap: 8px"><span style="font-size: 16px; line-height: 20px; font-weight: 700">{{v.name}}</span><span style="font-size: 13px; line-height: 20px; color: #4B5563; font-variant-numeric: tabular-nums">{{v.range}}</span></span>
+<span aria-hidden="true" style="position: relative; height: 8px; border-radius: 4px; background: #E5E7EB"><span style="position: absolute; top: 0; height: 8px; border-radius: 4px; left: {{v.left}}; width: {{v.width}}; background: {{v.bar}}"></span></span>
+<sc-if value="{{v.hasNote}}" hint-placeholder-val="{{ false }}"><span style="font-size: 13px; line-height: 18px; font-weight: 600; color: {{v.noteColor}}">{{v.note}}</span></sc-if>
+</span>
+</button>
+<button type="button" aria-label="Escuchar {{v.name}}" style="flex: none; width: 44px; border: 1px solid #E3E6EB; border-radius: 14px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #111827"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></button>
+</div>
+</sc-for>
+<div aria-hidden="true" style="display: flex; justify-content: space-between; padding: 0 66px 0 48px; font-size: 12px; line-height: 16px; color: #4B5563"><span>Más grave</span><span>Más aguda</span></div>
+</div>
+
+<a href="Ensayo.dc.html" style="margin-top: auto; display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 16px; background: #111827; color: #FFFFFF; font-size: 17px; font-weight: 700; text-decoration: none">Ensayar como {{selName}}</a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const sel = (this.state && this.state.sel) || 'contralto';
+const data = [
+{ id: 'soprano', name: 'Soprano', range: 'Do4–La5', left: '48.8%', width: '51.2%', note: '', noteColor: '#4B5563' },
+{ id: 'contralto', name: 'Contralto', range: 'Fa3–Re5', left: '31.7%', width: '51.2%', note: 'Recomendada por tu prueba', noteColor: '#15803D' },
+{ id: 'tenor', name: 'Tenor', range: 'Do3–La4', left: '19.5%', width: '51.2%', note: 'Faltan tenores en tu zona', noteColor: '#111827' },
+{ id: 'bajo', name: 'Bajo', range: 'Mi2–Mi4', left: '0%', width: '58.5%', note: '', noteColor: '#4B5563' },
+{ id: 'melodia', name: 'Melodía', range: 'Do4–Do5', left: '48.8%', width: '29.3%', note: 'La más fácil: cántala en tu octava', noteColor: '#4B5563' }
+];
+const voices = data.map((v) => {
+const on = v.id === sel;
+return Object.assign({}, v, {
+selected: on,
+checked: String(on),
+hasNote: v.note !== '',
+border: on ? '#16A34A' : '#E3E6EB',
+bg: on ? '#ECFDF3' : '#FFFFFF',
+dot: on ? '#16A34A' : '#6B7280',
+bar: on ? '#16A34A' : '#9CA3AF',
+pick: () => this.setState({ sel: v.id })
+});
+});
+const current = data.filter((v) => v.id === sel)[0];
+return { voices: voices, selName: current.name };
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "v": 3,
+  "createdOnFiles": { "v": 1, "at": "2026-11-12T20:10:00Z" },
+  "title": "Flujo e interfaz de participación",
+  "launch": { "view": "canvas" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": { "x": 0, "y": 0, "w": 2152, "h": 920, "title": "Flujo del participante" },
+    "Colores.dc.html": { "x": 2232, "y": 0, "w": 880, "h": 920, "title": "Colores de apoyo" },
+    "Inicio.dc.html": { "x": 0, "y": 1340, "w": 390, "h": 844, "title": "Inicio (visitante)", "is_interactive": true },
+    "Unete.dc.html": { "x": 470, "y": 1340, "w": 390, "h": 844, "title": "Únete: elige cómo apoyar", "is_interactive": true },
+    "Registro.dc.html": { "x": 940, "y": 1340, "w": 390, "h": 844, "title": "Registro y compromiso", "is_interactive": true },
+    "MiEspacio.dc.html": { "x": 1410, "y": 1340, "w": 390, "h": 844, "title": "Mi espacio", "is_interactive": true },
+    "Canciones.dc.html": { "x": 0, "y": 2584, "w": 390, "h": 844, "title": "Canciones", "is_interactive": true },
+    "Voz.dc.html": { "x": 470, "y": 2584, "w": 390, "h": 844, "title": "Elegir voz", "is_interactive": true },
+    "Ensayo.dc.html": { "x": 940, "y": 2584, "w": 390, "h": 844, "title": "Ensayo", "is_interactive": true },
+    "Convocatorias.dc.html": { "x": 0, "y": 3828, "w": 390, "h": 844, "title": "Convocatorias", "is_interactive": true },
+    "Oracion.dc.html": { "x": 470, "y": 3828, "w": 390, "h": 844, "title": "Orar", "is_interactive": true },
+    "Aportar.dc.html": { "x": 940, "y": 3828, "w": 390, "h": 844, "title": "Aportar", "is_interactive": true },
+    "ModoEvento.dc.html": { "x": 0, "y": 5072, "w": 390, "h": 844, "title": "Modo evento: preparación", "is_interactive": true },
+    "EnDirecto.dc.html": { "x": 470, "y": 5072, "w": 390, "h": 844, "title": "En directo" },
+    "Despues.dc.html": { "x": 940, "y": 5072, "w": 390, "h": 844, "title": "Después del evento", "is_interactive": true }
+  },
+  "order": [
+    "Main.dc.html",
+    "Colores.dc.html",
+    "Inicio.dc.html",
+    "Unete.dc.html",
+    "Registro.dc.html",
+    "MiEspacio.dc.html",
+    "Canciones.dc.html",
+    "Voz.dc.html",
+    "Ensayo.dc.html",
+    "Convocatorias.dc.html",
+    "Oracion.dc.html",
+    "Aportar.dc.html",
+    "ModoEvento.dc.html",
+    "EnDirecto.dc.html",
+    "Despues.dc.html"
+  ],
+  "notes": {
+    "t_flujo": { "x": 0, "y": -300, "text": "Flujo y sistema de color", "kind": "title1", "maxW": 3112 },
+    "t_entrar": { "x": 0, "y": 1060, "text": "Entrar y comprometerse", "kind": "title1", "maxW": 1800 },
+    "t_cantar": { "x": 0, "y": 2304, "text": "Cantar: elegir voz y ensayar", "kind": "title1", "maxW": 1330 },
+    "t_fechas": { "x": 0, "y": 3548, "text": "Convocatorias, oración y aportación", "kind": "title1", "maxW": 1330 },
+    "t_evento": { "x": 0, "y": 4792, "text": "El día del evento", "kind": "title1", "maxW": 1330 }
+  },
+  "designSystems": []
+}

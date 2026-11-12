@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>En directo</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#F3F4F6}a:hover{color:#FFFFFF}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 18px; background: #0B0F17; font-family: Inter, system-ui, sans-serif; color: #F3F4F6; overflow: hidden">
+
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<span style="font-size: 14px; line-height: 20px; font-weight: 700">Estribillo</span>
+<span style="font-size: 14px; line-height: 20px; color: #A3AAB8; font-variant-numeric: tabular-nums">1:12 / 3:45</span>
+<span style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid #2A3140; border-radius: 999px; font-size: 12px; line-height: 16px; font-weight: 600; color: #D1D5DB"><span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #F3F4F6"></span>Sincronizado</span>
+</div>
+<div aria-hidden="true" style="position: relative; height: 4px; border-radius: 2px; background: #2A3140"><div style="position: absolute; left: 0; top: 0; height: 4px; width: 32%; border-radius: 2px; background: #F3F4F6"></div></div>
+
+<section aria-label="Letra" aria-live="off" style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 22px">
+<p style="margin: 0; font-size: 19px; line-height: 26px; color: #6B7280">Primera línea de la letra</p>
+<p style="margin: 0; font-family: 'Bricolage Grotesque', Inter, sans-serif; font-size: 34px; line-height: 40px; font-weight: 700; color: #6B7280; letter-spacing: -0.01em"><span style="color: #FFFFFF">Segunda línea, la que</span> cantas ahora</p>
+<p style="margin: 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #A3AAB8">Tercera línea de la letra</p>
+<div style="display: flex; align-items: center; gap: 12px; font-size: 15px; line-height: 20px; color: #A3AAB8">
+<span aria-hidden="true" style="display: flex; gap: 6px"><span style="width: 10px; height: 10px; border-radius: 50%; background: #F3F4F6"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #F3F4F6"></span><span style="width: 10px; height: 10px; box-sizing: border-box; border-radius: 50%; border: 2px solid #6B7280"></span><span style="width: 10px; height: 10px; box-sizing: border-box; border-radius: 50%; border: 2px solid #6B7280"></span></span>
+Después descansas 4 compases
+</div>
+</section>
+
+<div style="display: flex; align-items: center; gap: 12px; padding: 14px; background: #161B26; border: 1px solid #2A3140; border-radius: 16px">
+<span aria-hidden="true" style="display: flex"><span style="width: 14px; height: 14px; border-radius: 50%; background: #22C55E; border: 2px solid #161B26"></span><span style="width: 14px; height: 14px; border-radius: 50%; background: #3B82F6; border: 2px solid #161B26; margin-left: -6px"></span><span style="width: 14px; height: 14px; border-radius: 50%; background: #FB923C; border: 2px solid #161B26; margin-left: -6px"></span></span>
+<span style="flex: 1; font-size: 14px; line-height: 20px; color: #D1D5DB">[N] personas cantan y oran contigo ahora</span>
+</div>
+
+<button type="button" aria-label="Mantén pulsado para salir" style="align-self: center; height: 44px; padding: 0 18px; border: 1px solid #2A3140; border-radius: 999px; background: transparent; color: #A3AAB8; font: 600 13px Inter, sans-serif">Mantén pulsado para salir</button>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Registro y compromiso</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+input::placeholder{color:#6B7280}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 16px 20px 24px; display: flex; flex-direction: column; gap: 14px; background: #F5F6F8; font-family: Inter, system-ui, sans-serif; color: #111827; overflow: hidden">
+
+<div style="display: flex; align-items: center; justify-content: space-between; height: 44px">
+<a href="Unete.dc.html" style="display: flex; align-items: center; gap: 4px; height: 44px; padding-right: 8px; font-size: 15px; font-weight: 600; color: #111827; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Volver</a>
+<span style="font-size: 14px; font-weight: 600; color: #4B5563">Paso 2 de 2</span>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', Inter, sans-serif; font-size: 28px; line-height: 34px; font-weight: 700; letter-spacing: -0.01em">Tu compromiso</h1>
+<p style="margin: 0; font-size: 15px; line-height: 22px; color: #4B5563">Sin contraseña: te enviaremos un enlace al correo para entrar.</p>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="reg-nombre" style="font-size: 13px; line-height: 18px; font-weight: 600">Nombre o alias</label>
+<input id="reg-nombre" type="text" defaultValue="Ana" style="height: 46px; box-sizing: border-box; padding: 0 14px; border: 1px solid #C4CAD3; border-radius: 12px; background: #FFFFFF; font: 16px Inter, sans-serif; color: #111827">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="reg-correo" style="font-size: 13px; line-height: 18px; font-weight: 600">Correo electrónico</label>
+<input id="reg-correo" type="email" placeholder="tu@correo.com" style="height: 46px; box-sizing: border-box; padding: 0 14px; border: 1px solid #C4CAD3; border-radius: 12px; background: #FFFFFF; font: 16px Inter, sans-serif; color: #111827">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="reg-lugar" style="font-size: 13px; line-height: 18px; font-weight: 600">Dónde cantarás u orarás</label>
+<input id="reg-lugar" type="text" placeholder="Ciudad y plaza, o «desde casa»" style="height: 46px; box-sizing: border-box; padding: 0 14px; border: 1px solid #C4CAD3; border-radius: 12px; background: #FFFFFF; font: 16px Inter, sans-serif; color: #111827">
+</div>
+<div style="display: flex; align-items: center; gap: 8px; font-size: 13px; line-height: 18px; color: #4B5563">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+<span>Zona horaria: Europe/Madrid (UTC+1), detectada</span>
+<a href="#" style="margin-left: auto; font-weight: 600">Cambiar</a>
+</div>
+</div>
+
+<div style="display: flex; gap: 12px; padding: 14px; background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px">
+<div aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 50%; background: conic-gradient(transparent 0 1%, #16A34A 0 49%, transparent 0 51%, #1D4ED8 0 99%, transparent 0); display: flex; align-items: center; justify-content: center"><div style="width: 30px; height: 30px; border-radius: 50%; background: #FFFFFF"></div></div>
+<div style="display: flex; align-items: flex-start; gap: 10px">
+<input id="reg-compromiso" type="checkbox" defaultChecked="{{ true }}" style="flex: none; width: 22px; height: 22px; margin: 1px 0 0; accent-color: #111827">
+<label for="reg-compromiso" style="font-size: 15px; line-height: 21px"><b>Me comprometo</b> a participar el [FECHA DEL EVENTO] a las 21:00, mi hora, <b style="color: #15803D">cantando</b> y <b style="color: #1D4ED8">orando</b>.</label>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: flex-start; gap: 10px">
+<input id="reg-privacidad" type="checkbox" defaultChecked="{{ true }}" style="flex: none; width: 20px; height: 20px; margin: 0; accent-color: #111827">
+<label for="reg-privacidad" style="font-size: 14px; line-height: 20px; color: #374151">Acepto la <a href="#">política de privacidad</a></label>
+</div>
+<div style="display: flex; align-items: flex-start; gap: 10px">
+<input id="reg-mapa" type="checkbox" style="flex: none; width: 20px; height: 20px; margin: 0; accent-color: #111827">
+<label for="reg-mapa" style="font-size: 14px; line-height: 20px; color: #374151">Opcional: mostrar en el mapa público que participo orando</label>
+</div>
+<div style="display: flex; align-items: flex-start; gap: 10px">
+<input id="reg-edad" type="checkbox" defaultChecked="{{ true }}" style="flex: none; width: 20px; height: 20px; margin: 0; accent-color: #111827">
+<label for="reg-edad" style="font-size: 14px; line-height: 20px; color: #374151">Tengo [EDAD MÍNIMA] años o más, o permiso de mi familia</label>
+</div>
+</div>
+
+<a href="MiEspacio.dc.html" style="margin-top: auto; display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 16px; background: #111827; color: #FFFFFF; font-size: 17px; font-weight: 700; text-decoration: none">Confirmar mi participación</a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
