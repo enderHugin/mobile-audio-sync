@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Una Voz · diseño</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF5EA;color:#2B1E16;font-family:Nunito,system-ui,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:28px 20px 64px}
+header{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+h1{margin:0;font-family:Fraunces,Georgia,serif;font-size:36px;line-height:42px}
+.lead{margin:12px 0 20px;font-size:17px;line-height:25px;color:#5A4A3C;max-width:720px}
+.start{display:inline-flex;align-items:center;height:52px;padding:0 22px;border-radius:16px;background:#8C1C2B;color:#FFF8EC;font-weight:800;font-size:17px;text-decoration:none}
+h2{margin:44px 0 16px;font-family:Fraunces,Georgia,serif;font-size:26px;line-height:32px}
+.row{display:flex;flex-wrap:wrap;gap:20px}
+.tile{margin:0;display:flex;flex-direction:column;gap:10px}
+.tile.wide{max-width:100%}
+.frame{display:block;position:relative;overflow:hidden;border-radius:22px;border:1px solid #E2CFAE;background:#fff;box-shadow:0 6px 18px rgba(43,30,22,.08)}
+.tile.wide .frame{border-radius:12px;max-width:100%;overflow:auto}
+.frame iframe{position:absolute;left:0;top:0;border:0;transform-origin:0 0;pointer-events:none}
+figcaption a{color:#2B1E16;font-weight:800;font-size:15px}
+footer{margin-top:48px;font-size:14px;line-height:20px;color:#6B5A4C}
+footer a{color:#8C1C2B}
+</style>
+</head>
+<body>
+<main>
+<header><svg width="56" height="56" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#2B1E16"/><g stroke="#2B1E16" stroke-width="4"><circle cx="100" cy="30" r="22" fill="#3E8A3A"/><circle cx="135" cy="39.4" r="22" fill="#E2B23C"/><circle cx="160.6" cy="65" r="22" fill="#23509E"/><circle cx="170" cy="100" r="22" fill="#8C1C2B"/><circle cx="160.6" cy="135" r="22" fill="#E07B24"/><circle cx="135" cy="160.6" r="22" fill="#E2B23C"/><circle cx="100" cy="170" r="22" fill="#3E8A3A"/><circle cx="65" cy="160.6" r="22" fill="#8C1C2B"/><circle cx="39.4" cy="135" r="22" fill="#23509E"/><circle cx="30" cy="100" r="22" fill="#E2B23C"/><circle cx="39.4" cy="65" r="22" fill="#E07B24"/><circle cx="65" cy="39.4" r="22" fill="#8C1C2B"/></g><circle cx="100" cy="100" r="52" fill="#2B1E16"/><g stroke="#2B1E16" stroke-width="4"><circle cx="113" cy="68.6" r="15" fill="#23509E"/><circle cx="131.4" cy="87" r="15" fill="#E07B24"/><circle cx="131.4" cy="113" r="15" fill="#3E8A3A"/><circle cx="113" cy="131.4" r="15" fill="#8C1C2B"/><circle cx="87" cy="131.4" r="15" fill="#23509E"/><circle cx="68.6" cy="113" r="15" fill="#E07B24"/><circle cx="68.6" cy="87" r="15" fill="#3E8A3A"/><circle cx="87" cy="68.6" r="15" fill="#8C1C2B"/></g><circle cx="100" cy="100" r="19" fill="#E2B23C" stroke="#2B1E16" stroke-width="4"/><path d="M100 88v24M90 97h20" stroke="#2B1E16" stroke-width="5" stroke-linecap="round"/></svg><h1>Una Voz · diseño</h1></header>
+<p class="lead">Prototipo navegable de la versión 2. Toca una pantalla para abrirla; dentro, los botones llevan a las siguientes. Los textos entre corchetes son datos que aún faltan.</p>
+<a class="start" href="Encuentros.html">Empezar el recorrido</a>
+<h2>Versión 2: flujo e identidad</h2>
+<div class="row">
+<figure class="tile wide">
+<a href="Flujo2.html" class="frame" style="width:1000px;height:414px" aria-label="Abrir: Cómo participa una persona">
+<iframe src="Flujo2.html" title="Cómo participa una persona" loading="lazy" tabindex="-1" style="width:2040px;height:844px;transform:scale(0.49019607843137253)"></iframe>
+</a>
+<figcaption><a href="Flujo2.html">Cómo participa una persona</a></figcaption>
+</figure>
+<figure class="tile wide">
+<a href="Identidad.html" class="frame" style="width:528px;height:624px" aria-label="Abrir: Identidad: rosetón, símbolos y colores">
+<iframe src="Identidad.html" title="Identidad: rosetón, símbolos y colores" loading="lazy" tabindex="-1" style="width:880px;height:1040px;transform:scale(0.6)"></iframe>
+</a>
+<figcaption><a href="Identidad.html">Identidad: rosetón, símbolos y colores</a></figcaption>
+</figure>
+</div>
+<h2>Elegir encuentro y lugar</h2>
+<div class="row">
+<figure class="tile">
+<a href="Encuentros.html" class="frame" style="width:312px;height:675px" aria-label="Abrir: 1 · Encuentros">
+<iframe src="Encuentros.html" title="1 · Encuentros" loading="lazy" tabindex="-1" style="width:390px;height:844px;transform:scale(0.8)"></iframe>
+</a>
+<figcaption><a href="Encuentros.html">1 · Encuentros</a></figcaption>
+</figure>
+<figure class="tile">
+<a href="Lugares.html" class="frame" style="width:312px;height:675px" aria-label="Abrir: 2 · Elegir lugar en el mapa">
+<iframe src="Lugares.html" title="2 · Elegir lugar en el mapa" loading="lazy" tabindex="-1" style="width:390px;height:844px;transform:scale(0.8)"></iframe>
+</a>
+<figcaption><a href="Lugares.html">2 · Elegir lugar en el mapa</a></figcaption>
+</figure>
+<figure class="tile">
+<a href="ProponerLugar.html" class="frame" style="width:312px;height:675px" aria-label="Abrir: Proponer una plaza o un camino">
+<iframe src="ProponerLugar.html" title="Proponer una plaza o un camino" loading="lazy" tabindex="-1" style="width:390px;height:844px;transform:scale(0.8)"></iframe>
+</a>
+<figcaption><a href="ProponerLugar.html">Proponer una plaza o un camino</a></figcaption>
+</figure>
+<figure class="tile">
+<a href="Lugar.html" class="frame" style="width:312px;height:675px" aria-label="Abrir: Ficha del lugar">
+<iframe src="Lugar.html" title="Ficha del lugar" loading="lazy" tabindex="-1" style="width:390px;height:844px;transform:scale(0.8)"></iframe>
+</a>
+<figcaption><a href="Lugar.html">Ficha del lugar</a></figcaption>
+</figure>
+</div>
+<h2>Apuntarse</h2>
+<div class="row">
+<figure class="tile">
+<a href="Participar.html" class="frame" style="width:312px;height:675px" aria-label="Abrir: 3 · ¿Cómo vienes?">
+<iframe src="Participar.html" title="3 · ¿Cómo vienes?" loading="lazy" tabindex="-1" style="width:390px;height:844px;transform:scale(0.8)"></iframe>
+</a>
+<figcaption><a href="Participar.html">3 · ¿Cómo vienes?</a></figcaption>
+</figure>
+<figure class="tile">
+<a href="Cancion.html" class="frame" style="width:312px;height:675px" aria-label="Abrir: 4 · Elegir canción">
+<iframe src="Cancion.html" title="4 · Elegir canción" loading="lazy" tabindex="-1" style="width:390px;height:844px;transform:scale(0.8)"></iframe>
+</a>
+<figcaption><a href="Cancion.html">4 · Elegir canción</a></figcaption>
+</figure>
+<figure class="tile">
+<a href="TuVoz.html" class="frame" style="width:312px;height:675px" aria-label="Abrir: 5 · Elegir voz">
+<iframe src="TuVoz.html" title="5 · Elegir voz" loading="lazy" tabindex="-1" style="width:390px;height:844px;transform:scale(0.8)"></iframe>
+</a>
+<figcaption><a href="TuVoz.html">5 · Elegir voz</a></figcaption>
+</figure>
+<figure class="tile">
+<a href="TusDatos.html" class="frame" style="width:312px;height:675px" aria-label="Abrir: 6 · Tus datos">
+<iframe src="TusDatos.html" title="6 · Tus datos" loading="lazy" tabindex="-1" style="width:390px;height:844px;transform:scale(0.8)"></iframe>
+</a>
+<figcaption><a href="TusDatos.html">6 · Tus datos</a></figcaption>
+</figure>
+</div>
+<h2>Prepararse, el día y la organización</h2>
+<div class="row">
+<figure class="tile">
+<a href="MiEncuentro.html" class="frame" style="width:312px;height:675px" aria-label="Abrir: Mi encuentro">
+<iframe src="MiEncuentro.html" title="Mi encuentro" loading="lazy" tabindex="-1" style="width:390px;height:844px;transform:scale(0.8)"></iframe>
+</a>
+<figcaption><a href="MiEncuentro.html">Mi encuentro</a></figcaption>
+</figure>
+<figure class="tile">
+<a href="Ensayar.html" class="frame" style="width:312px;height:675px" aria-label="Abrir: Ensayar">
+<iframe src="Ensayar.html" title="Ensayar" loading="lazy" tabindex="-1" style="width:390px;height:844px;transform:scale(0.8)"></iframe>
+</a>
+<figcaption><a href="Ensayar.html">Ensayar</a></figcaption>
+</figure>
+<figure class="tile">
+<a href="DiaDelEncuentro.html" class="frame" style="width:312px;height:675px" aria-label="Abrir: El día, en el lugar">
+<iframe src="DiaDelEncuentro.html" title="El día, en el lugar" loading="lazy" tabindex="-1" style="width:390px;height:844px;transform:scale(0.8)"></iframe>
+</a>
+<figcaption><a href="DiaDelEncuentro.html">El día, en el lugar</a></figcaption>
+</figure>
+<figure class="tile">
+<a href="Organizador.html" class="frame" style="width:312px;height:675px" aria-label="Abrir: Organización: crear un encuentro">
+<iframe src="Organizador.html" title="Organización: crear un encuentro" loading="lazy" tabindex="-1" style="width:390px;height:844px;transform:scale(0.8)"></iframe>
+</a>
+<figcaption><a href="Organizador.html">Organización: crear un encuentro</a></figcaption>
+</figure>
+</div>
+<footer>Actualizado el 13 de noviembre de 2026. Fuente: <a href="https://github.com/enderHugin/mobile-audio-sync/tree/design/flujo-e-interfaz/design">rama design/flujo-e-interfaz</a>.</footer>
+</main>
+</body>
+</html>
