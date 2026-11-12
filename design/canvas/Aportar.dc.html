@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Aportar</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#C2410C}a:hover{color:#9A3412}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; display: flex; flex-direction: column; background: #F5F6F8; font-family: Inter, system-ui, sans-serif; color: #111827; overflow: hidden">
+
+<main style="flex: 1; min-height: 0; box-sizing: border-box; padding: 18px 20px 16px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h1 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: 'Bricolage Grotesque', Inter, sans-serif; font-size: 30px; line-height: 36px; font-weight: 700; letter-spacing: -0.01em"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Aportar</h1>
+<p style="margin: 0; font-size: 14px; line-height: 20px; color: #4B5563">Tu aportación sostiene lo que no se ve, para que cualquiera pueda participar gratis.</p>
+</div>
+
+<div role="group" aria-label="Frecuencia" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; padding: 4px; background: #E9ECF0; border-radius: 14px">
+<button type="button" aria-pressed="{{monthlyPressed}}" onClick="{{setMonthly}}" style="height: 44px; border: none; border-radius: 11px; background: {{monthlyBg}}; font: 700 15px Inter, sans-serif; color: #111827; cursor: pointer">Cada mes</button>
+<button type="button" aria-pressed="{{oncePressed}}" onClick="{{setOnce}}" style="height: 44px; border: none; border-radius: 11px; background: {{onceBg}}; font: 700 15px Inter, sans-serif; color: #111827; cursor: pointer">Una vez</button>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div role="group" aria-label="Cantidad" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{amounts}}" as="a" hint-placeholder-count="4">
+<button type="button" aria-pressed="{{a.pressed}}" onClick="{{a.pick}}" style="height: 56px; border: 2px solid {{a.border}}; border-radius: 14px; background: {{a.bg}}; font: 700 18px Inter, sans-serif; color: #111827; cursor: pointer">{{a.label}}</button>
+</sc-for>
+</div>
+<button type="button" style="height: 44px; border: 1px solid #C4CAD3; border-radius: 12px; background: #FFFFFF; font: 600 14px Inter, sans-serif; color: #111827">Otra cantidad</button>
+</div>
+
+<section style="display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px">
+<h2 style="margin: 0; font-size: 16px; line-height: 22px; font-weight: 700">A qué se destina</h2>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 20px; color: #374151">
+<li style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="flex: none; width: 8px; height: 8px; border-radius: 50%; background: #FB923C"></span>Servidores y sincronía del reloj</li>
+<li style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="flex: none; width: 8px; height: 8px; border-radius: 50%; background: #FB923C"></span>Licencias y grabación de las pistas</li>
+<li style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="flex: none; width: 8px; height: 8px; border-radius: 50%; background: #FB923C"></span>Traducción de letras a más idiomas</li>
+<li style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="flex: none; width: 8px; height: 8px; border-radius: 50%; background: #FB923C"></span>Accesibilidad: subtítulos y lectura fácil</li>
+</ul>
+<a href="#" style="font-size: 14px; line-height: 20px; font-weight: 700">Ver el informe de cuentas</a>
+</section>
+
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; line-height: 18px; color: #4B5563">
+<sc-if value="{{monthly}}" hint-placeholder-val="{{ true }}"><div>Cancela cuando quieras desde Mi espacio.</div></sc-if>
+<div>Certificado de donación si tu país lo permite.</div>
+<div style="display: flex; align-items: center; gap: 6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pago seguro con [PROVEEDOR DE PAGO]</div>
+</div>
+
+<button type="button" style="margin-top: auto; height: 56px; border: none; border-radius: 16px; background: #FB923C; color: #111827; font: 700 17px Inter, sans-serif; cursor: pointer">{{cta}}</button>
+
+</main>
+
+<nav aria-label="Principal" style="flex: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); height: 76px; box-sizing: border-box; padding: 6px 4px 14px; background: #FFFFFF; border-top: 1px solid #E3E6EB">
+<a href="MiEspacio.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: #4B5563; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Mi espacio</a>
+<a href="Canciones.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: #4B5563; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Cantar</a>
+<a href="Oracion.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: #4B5563; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>Orar</a>
+<a href="Convocatorias.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: #4B5563; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Fechas</a>
+<a href="Aportar.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; line-height: 16px; font-weight: 700; color: #C2410C; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Aportar</a>
+</nav>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const s = this.state || {};
+const monthly = s.monthly ?? true;
+const amount = s.amount ?? 5;
+const amounts = [3, 5, 10, 20].map((v) => {
+const on = v === amount;
+return {
+label: v + ' €',
+pressed: String(on),
+border: on ? '#FB923C' : '#E3E6EB',
+bg: on ? '#FFF4EA' : '#FFFFFF',
+pick: () => this.setState({ amount: v })
+};
+});
+return {
+monthly: monthly,
+monthlyPressed: String(monthly),
+oncePressed: String(!monthly),
+monthlyBg: monthly ? '#FFFFFF' : 'transparent',
+onceBg: monthly ? 'transparent' : '#FFFFFF',
+setMonthly: () => this.setState({ monthly: true }),
+setOnce: () => this.setState({ monthly: false }),
+amounts: amounts,
+cta: 'Aportar ' + amount + ' €' + (monthly ? ' al mes' : '')
+};
+}
+}
+</script>
+</body>
+</html>

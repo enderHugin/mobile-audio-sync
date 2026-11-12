@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Orar</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+input::placeholder{color:#6B7280}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; display: flex; flex-direction: column; background: #F5F6F8; font-family: Inter, system-ui, sans-serif; color: #111827; overflow: hidden">
+
+<main style="flex: 1; min-height: 0; box-sizing: border-box; padding: 18px 20px 14px; display: flex; flex-direction: column; gap: 12px">
+
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h1 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: 'Bricolage Grotesque', Inter, sans-serif; font-size: 30px; line-height: 36px; font-weight: 700; letter-spacing: -0.01em"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>Orar</h1>
+<p style="margin: 0; font-size: 14px; line-height: 20px; color: #4B5563">Acompaña el canto desde donde estés. No hace falta cantar ni salir de casa.</p>
+</div>
+
+<section style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: #FFFFFF; border: 2px solid #1D4ED8; border-radius: 16px">
+<label for="orar-misma-hora" style="flex: 1; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 16px; line-height: 22px; font-weight: 700">A la misma hora</span>
+<span style="font-size: 13px; line-height: 18px; color: #4B5563">Ora mientras el mundo canta: [FECHA DEL EVENTO], 21:00 tu hora</span>
+</label>
+<input id="orar-misma-hora" type="checkbox" role="switch" defaultChecked="{{ true }}" style="flex: none; width: 24px; height: 24px; margin: 0; accent-color: #1D4ED8">
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 16px; line-height: 22px; font-weight: 700">Relevo de oración</h2>
+<p style="margin: 0; font-size: 13px; line-height: 18px; color: #4B5563">Las 24 h antes del evento, que en cada cuarto de hora alguien ore en algún lugar del mundo.</p>
+</div>
+<div role="img" aria-label="Cobertura del relevo por horas. Faltan personas entre 18 y 13 horas antes del evento." style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: grid; grid-template-columns: repeat(24, minmax(0, 1fr)); gap: 3px; height: 56px; align-items: end">
+<sc-for list="{{hours}}" as="h" hint-placeholder-count="24">
+<div style="position: relative; height: 56px; border-radius: 3px; background: #E5E7EB; outline: {{h.outline}}; outline-offset: 2px"><div style="position: absolute; left: 0; right: 0; bottom: 0; height: {{h.height}}; border-radius: 3px; background: #1D4ED8"></div></div>
+</sc-for>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 11px; line-height: 14px; color: #4B5563"><span>−24 h</span><span>−18 h</span><span>−12 h</span><span>−6 h</span><span>Evento</span></div>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<span style="flex: 1; display: flex; align-items: center; gap: 6px; font-size: 14px; line-height: 20px; font-weight: 700; color: #1D4ED8"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Tu turno: 20:45–21:00</span>
+<button type="button" style="flex: none; height: 40px; padding: 0 12px; border: 1px solid #1D4ED8; border-radius: 10px; background: #FFFFFF; font: 700 13px Inter, sans-serif; color: #1D4ED8">Cubrir un hueco</button>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px">
+<label for="orar-intencion" style="font-size: 16px; line-height: 22px; font-weight: 700">Intenciones</label>
+<div style="display: flex; gap: 8px">
+<input id="orar-intencion" type="text" placeholder="Añade una intención (opcional)" style="flex: 1; min-width: 0; height: 44px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C4CAD3; border-radius: 12px; background: #FFFFFF; font: 15px Inter, sans-serif; color: #111827">
+<button type="button" style="flex: none; height: 44px; padding: 0 14px; border: none; border-radius: 12px; background: #1D4ED8; color: #FFFFFF; font: 700 14px Inter, sans-serif">Enviar</button>
+</div>
+<p style="margin: 0; font-size: 13px; line-height: 18px; color: #4B5563">Se comparten sin tu nombre · [N] intenciones esta semana</p>
+</section>
+
+<div style="display: flex; align-items: center; gap: 8px; padding: 0 2px; font-size: 14px; line-height: 20px; color: #374151"><span aria-hidden="true" style="width: 10px; height: 10px; border-radius: 50%; background: #1D4ED8; box-shadow: 0 0 0 4px #DBE4FF"></span>[N] personas orando ahora</div>
+
+</main>
+
+<nav aria-label="Principal" style="flex: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); height: 76px; box-sizing: border-box; padding: 6px 4px 14px; background: #FFFFFF; border-top: 1px solid #E3E6EB">
+<a href="MiEspacio.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: #4B5563; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Mi espacio</a>
+<a href="Canciones.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: #4B5563; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Cantar</a>
+<a href="Oracion.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; line-height: 16px; font-weight: 700; color: #1D4ED8; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>Orar</a>
+<a href="Convocatorias.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: #4B5563; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Fechas</a>
+<a href="Aportar.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: #4B5563; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Aportar</a>
+</nav>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const cover = [100, 100, 100, 90, 75, 60, 40, 25, 20, 30, 45, 60, 80, 100, 100, 100, 95, 85, 90, 100, 100, 100, 100, 100];
+const hours = cover.map(function (c, i) {
+return { height: c + '%', outline: i === 23 ? '2px solid #111827' : 'none' };
+});
+return { hours: hours };
+}
+}
+</script>
+</body>
+</html>
