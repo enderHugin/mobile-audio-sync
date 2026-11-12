@@ -3,6 +3,7 @@
 Diseño del flujo del participante y de las pantallas de móvil. La **versión 2 (cálida)** es la vigente; la versión 1 se conserva para comparar.
 
 - **Lienzo editable:** https://claude.ai/artifact/Hkk4yG9unjmRy2ZoYzJ37e (abre en la página «Versión 2 · cálida»; privado de su propietario hasta que lo comparta).
+- **Ver en la web (cualquier navegador):** https://enderhugin.github.io/mobile-audio-sync/ — se genera con `node design/build-pages.mjs <carpeta>` y se publica en la rama `gh-pages`.
 - **Fuente del lienzo:** [`canvas/`](canvas/). Son archivos `.dc.html` del editor de diseño: necesitan su entorno (`support.js`) para verse, así que GitHub no los muestra como página. Sirven como referencia de estructura, textos, colores y medidas para implementar la web en `web/`.
 
 ## Tono
