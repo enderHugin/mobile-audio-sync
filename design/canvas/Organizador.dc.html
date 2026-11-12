@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Organización: crear un encuentro</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#8C1C2B}a:hover{color:#6B1420}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 12px; background: #FBF5EA; font-family: Nunito, system-ui, sans-serif; color: #2B1E16; overflow: hidden">
+
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px">
+<span style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #F6E2A8; font-size: 12px; line-height: 16px; font-weight: 800"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8A6416" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"/></svg>Solo organización</span>
+<h1 style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 30px; line-height: 36px; font-weight: 700">Nuevo encuentro</h1>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="org-nombre" style="font-size: 14px; line-height: 18px; font-weight: 800">Nombre</label>
+<input id="org-nombre" type="text" defaultValue="Segundo encuentro" style="height: 46px; box-sizing: border-box; padding: 0 14px; border: 1px solid #C9B48F; border-radius: 14px; background: #FFFDF8; font: 16px Nunito, sans-serif; color: #2B1E16">
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 120px; gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="org-fecha" style="font-size: 14px; line-height: 18px; font-weight: 800">Fecha</label>
+<input id="org-fecha" type="date" style="height: 46px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9B48F; border-radius: 14px; background: #FFFDF8; font: 16px Nunito, sans-serif; color: #2B1E16">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="org-hora" style="font-size: 14px; line-height: 18px; font-weight: 800">Hora (Madrid)</label>
+<input id="org-hora" type="time" defaultValue="21:00" style="height: 46px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9B48F; border-radius: 14px; background: #FFFDF8; font: 16px Nunito, sans-serif; color: #2B1E16">
+</div>
+</div>
+<p style="margin: -2px 0 0; font-size: 13px; line-height: 18px; color: #6B5A4C">A la vez en todo el mundo. En invierno, 21:00 en Madrid son las 15:00 en Bogotá y las 04:00 del día siguiente en Manila.</p>
+
+<section style="display: flex; flex-direction: column; gap: 8px; padding: 12px 14px; background: #FFFDF8; border: 1px solid #E6D6BA; border-radius: 18px">
+<h2 style="margin: 0; font-size: 15px; line-height: 20px; font-weight: 800">Antes de publicar, todo listo · 2 canciones</h2>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 20px">
+<li style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="flex: none; width: 20px; height: 20px; border-radius: 50%; background: #8C1C2B; display: flex; align-items: center; justify-content: center"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFF8EC" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Composición terminada</li>
+<li style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="flex: none; width: 20px; height: 20px; border-radius: 50%; background: #8C1C2B; display: flex; align-items: center; justify-content: center"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFF8EC" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Voces separadas, 5 de 5</li>
+<li style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="flex: none; width: 20px; height: 20px; border-radius: 50%; background: #8C1C2B; display: flex; align-items: center; justify-content: center"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFF8EC" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Base musical</li>
+<li style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="flex: none; width: 20px; height: 20px; border-radius: 50%; background: #8C1C2B; display: flex; align-items: center; justify-content: center"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFF8EC" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Voz de guía para ensayar</li>
+<li style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="flex: none; width: 20px; height: 20px; box-sizing: border-box; border-radius: 50%; border: 2px solid #C9B48F"></span><span style="flex: 1">Letra traducida, 3 de 8 idiomas</span><span style="font-size: 12px; font-weight: 700; color: #6B5A4C">Opcional</span></li>
+</ul>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 10px; padding: 12px 14px; background: #FFFDF8; border: 1px solid #E6D6BA; border-radius: 18px">
+<h2 style="margin: 0; font-size: 15px; line-height: 20px; font-weight: 800">Cuándo se habilita un lugar</h2>
+<div style="display: flex; align-items: center; gap: 10px">
+<span id="org-min-label" style="flex: 1; font-size: 14px; line-height: 20px">Mínimo de personas</span>
+<div role="group" aria-labelledby="org-min-label" style="display: flex; align-items: center; gap: 4px">
+<button type="button" aria-label="Menos" style="width: 40px; height: 40px; border: 1px solid #C9B48F; border-radius: 12px; background: #FBF5EA; font: 800 18px Nunito, sans-serif; color: #2B1E16">−</button>
+<span style="width: 40px; text-align: center; font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums">25</span>
+<button type="button" aria-label="Más" style="width: 40px; height: 40px; border: 1px solid #C9B48F; border-radius: 12px; background: #FBF5EA; font: 800 18px Nunito, sans-serif; color: #2B1E16">+</button>
+</div>
+</div>
+<div style="display: flex; align-items: center; gap: 10px; padding-top: 10px; border-top: 1px solid #EFE2CA">
+<label for="org-sacerdote" style="flex: 1; display: flex; flex-direction: column"><span style="font-size: 14px; line-height: 20px; font-weight: 800">Exigir sacerdote que exponga el Santísimo</span><span style="font-size: 13px; line-height: 18px; color: #6B5A4C">{{priestNote}}</span></label>
+<button id="org-sacerdote" type="button" role="switch" aria-checked="{{priestChecked}}" onClick="{{togglePriest}}" style="flex: none; position: relative; width: 52px; height: 32px; border: none; border-radius: 999px; background: {{trackBg}}; cursor: pointer; padding: 0"><span aria-hidden="true" style="position: absolute; top: 4px; left: {{knobLeft}}; width: 24px; height: 24px; border-radius: 50%; background: #FFF8EC"></span></button>
+</div>
+</section>
+
+<button type="button" style="margin-top: auto; height: 56px; border: none; border-radius: 18px; background: #8C1C2B; color: #FFF8EC; font: 800 17px Nunito, sans-serif; cursor: pointer">Publicar encuentro</button>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const priest = (this.state && this.state.priest) ?? true;
+return {
+priestChecked: String(priest),
+trackBg: priest ? '#8C1C2B' : '#B59E78',
+knobLeft: priest ? '24px' : '4px',
+priestNote: priest ? 'Ningún lugar se habilita sin él.' : 'Recomendado, pero no obligatorio.',
+togglePriest: () => this.setState({ priest: !priest })
+};
+}
+}
+</script>
+</body>
+</html>

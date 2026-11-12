@@ -1,65 +1,82 @@
 # Diseño: flujo e interfaz de participación
 
-Primera versión del flujo del participante y de las pantallas de móvil.
+Diseño del flujo del participante y de las pantallas de móvil. La **versión 2 (cálida)** es la vigente; la versión 1 se conserva para comparar.
 
-- **Lienzo editable:** https://claude.ai/artifact/Hkk4yG9unjmRy2ZoYzJ37e (privado de su propietario hasta que lo comparta).
+- **Lienzo editable:** https://claude.ai/artifact/Hkk4yG9unjmRy2ZoYzJ37e (abre en la página «Versión 2 · cálida»; privado de su propietario hasta que lo comparta).
 - **Fuente del lienzo:** [`canvas/`](canvas/). Son archivos `.dc.html` del editor de diseño: necesitan su entorno (`support.js`) para verse, así que GitHub no los muestra como página. Sirven como referencia de estructura, textos, colores y medidas para implementar la web en `web/`.
 
-## Flujo
+## Tono
 
-1. **Descubrir.** Inicio con la identidad, la próxima convocatoria y la cuenta atrás.
-2. **Unirse.** Elegir cómo apoyar: cantar, orar o aportar (una o varias). Cada elección da color.
-3. **Comprometerse.** Registro sin contraseña (enlace por correo), compromiso de asistencia y permisos.
-4. **Prepararse**, según lo elegido:
-   - **Cantar:** elegir canción y voz por tesitura (con prueba de micrófono opcional) y ensayar la pista.
-   - **Orar:** a la hora del evento o en un turno del relevo de 24 h.
-   - **Aportar:** una vez o cada mes, viendo a qué se destina.
-5. **Convocatoria.** Recordatorios y ensayo general en línea, que también es la prueba técnica.
-6. **Día del evento.** Modo evento: comprobaciones, reloj sincronizado, cuenta atrás y letra en directo.
-7. **Después.** Agradecimiento, mapa de participación, pregunta sobre la sincronía y siguiente convocatoria.
+Hogar, quedada, encuentro, valentía, tradición y contemplación. No es para gente que sepa música: es para gente que quiere cantar y quedar en un lugar concreto.
 
-## Colores de apoyo
+## Flujo (versión 2)
 
-| Apoyo | Icono | Relleno | Texto sobre claro |
-|---|---|---|---|
-| Canto | nota musical | `#16A34A` | `#15803D` |
-| Oración | llama | `#1D4ED8` | `#1D4ED8` |
-| Aportación | corazón | `#FB923C` | `#C2410C` |
+1. **Encuentros.** Lista de fechas fijadas por la organización, cada una con su cuenta atrás.
+2. **Lugar.** Mapa con plazas y caminos. Si no hay uno cerca, se propone tocando el mapa.
+3. **¿Cómo vienes?** Cantar, orar o aportar; una o varias.
+4. **Canciones.** Las del encuentro, en orden; se marcan las que se van a cantar.
+5. **Voz.** Sin lenguaje musical: «la melodía», «aguda de mujer», «grave de hombre»…
+6. **Tus datos.** Nombre y correo o móvil.
+7. **Mi encuentro.** Entrada con cuenta atrás, ensayar e invitar.
+8. **El día.** En el lugar, ante el Santísimo, todos a la vez en el mundo.
 
-- Quien apoya de varias formas lleva un anillo repartido a partes iguales entre sus colores.
-- El anillo con los tres colores es el símbolo del evento.
-- El color nunca va solo: siempre con icono y nombre. Los tres tonos difieren también en luminosidad, para distinguirse con daltonismo.
+### Cómo se habilita un lugar
 
-Base neutra: fondo `#F5F6F8`, superficie `#FFFFFF`, texto `#111827`, texto secundario `#4B5563`. Modo evento en oscuro: fondo `#0B0F17`. Tipografías: Bricolage Grotesque (títulos) e Inter (texto).
+Alguien lo propone (plaza o camino) → se apuntan **25 personas** → un **sacerdote confirma que expondrá el Santísimo** → lugar habilitado. El mínimo y la exigencia del sacerdote se ajustan por encuentro en la pantalla de organización.
 
-## Pantallas
+### Organización
+
+La organización crea cada encuentro y solo puede publicarlo cuando la composición, las voces separadas, la base y la voz de guía están listas. Las traducciones de la letra son opcionales.
+
+## Identidad
+
+- **Símbolo:** un rosetón de catedral. Cada persona es un cristal: su rosetón personal tiene seis pétalos con los colores de cómo viene.
+- **Símbolos:** custodia (orar), nota (cantar), corazón (aportar), vieira (camino), pin con cruz (plaza), palma (valentía), cruz, estrella (encuentro), vela (orar desde casa), banderines (quedada).
+- **Tipografías:** Fraunces (títulos) y Nunito (texto).
+
+| Color | Uso | Valor |
+|---|---|---|
+| Granate | Entrega; botones principales | `#8C1C2B` |
+| Oro | Lo eterno, el Santísimo | `#E2B23C` (texto `#8A6416`) |
+| Marfil | Fondo, hogar | `#FBF5EA` |
+| Tinta | Texto | `#2B1E16` |
+| Verde | Cantar | `#3E8A3A` (texto `#2F6B2C`) |
+| Azul | Orar | `#23509E` |
+| Naranja | Aportar | `#E07B24` (texto `#A44E0E`) |
+
+El color de cada forma de apoyo va siempre con su icono y su nombre.
+
+## Pantallas (versión 2)
 
 | Archivo | Pantalla |
 |---|---|
-| `Main.dc.html` | Diagrama del flujo |
-| `Colores.dc.html` | Sistema de colores |
-| `Inicio.dc.html` | Inicio para visitantes |
-| `Unete.dc.html` | Elegir cómo apoyar (interactiva) |
-| `Registro.dc.html` | Registro y compromiso |
-| `MiEspacio.dc.html` | Inicio de la persona registrada |
-| `Canciones.dc.html` | Lista de canciones |
-| `Voz.dc.html` | Elegir voz por tesitura (interactiva) |
-| `Ensayo.dc.html` | Reproductor de ensayo con letra y mezcla |
-| `Convocatorias.dc.html` | Fechas y recordatorios |
-| `Oracion.dc.html` | Oración y relevo |
-| `Aportar.dc.html` | Aportación puntual o mensual (interactiva) |
-| `ModoEvento.dc.html` | Preparación del día del evento |
-| `EnDirecto.dc.html` | Letra durante la canción |
-| `Despues.dc.html` | Después del evento |
+| `Flujo2.dc.html` | Diagrama del flujo |
+| `Identidad.dc.html` | Rosetón, símbolos, colores y tipografías |
+| `Encuentros.dc.html` | Lista de encuentros con cuenta atrás |
+| `Lugares.dc.html` | Mapa y lista de lugares |
+| `ProponerLugar.dc.html` | Proponer plaza o camino (interactiva) |
+| `Lugar.dc.html` | Ficha del lugar y requisitos |
+| `Participar.dc.html` | ¿Cómo vienes? (interactiva) |
+| `Cancion.dc.html` | Canciones del encuentro (interactiva) |
+| `TuVoz.dc.html` | Elegir voz (interactiva) |
+| `TusDatos.dc.html` | Último paso |
+| `MiEncuentro.dc.html` | Entrada con cuenta atrás |
+| `Ensayar.dc.html` | Ensayo con letra (interactiva) |
+| `DiaDelEncuentro.dc.html` | El día, ante el Santísimo |
+| `Organizador.dc.html` | Crear un encuentro (interactiva) |
+
+Versión 1: `Main`, `Colores`, `Inicio`, `Unete`, `Registro`, `MiEspacio`, `Canciones`, `Voz`, `Ensayo`, `Convocatorias`, `Oracion`, `Aportar`, `ModoEvento`, `EnDirecto`, `Despues`.
 
 ## Marcadores
 
-Los datos que aún no existen van entre corchetes: `[FECHA DEL EVENTO]`, `[LUGAR]`, `[N]`, `[Título de la canción]`, `[EDAD MÍNIMA]`, `[PROVEEDOR DE PAGO]`. «Una Voz» es un nombre provisional. Las líneas de letra son de relleno. Los rangos de voz son los habituales de coro; cada canción tendrá los suyos.
+Los datos que aún no existen van entre corchetes: `[FECHA 1]`, `[N]`, `[Título de la canción]`, `[PARROQUIA]`, `[EDAD MÍNIMA]`. «Una Voz» es un nombre provisional. Las líneas de letra son de relleno. Los nombres de lugares del mapa son de ejemplo.
 
 ## Decisiones pendientes
 
-- Nombre del evento y si tiene un marco religioso explícito (afecta al tono de la pantalla de oración).
-- **Datos de oración:** revelan creencias, categoría especial del RGPD (art. 9). Hace falta consentimiento explícito; por eso mostrarse en el mapa es una casilla aparte y opcional. Las intenciones compartidas necesitan moderación.
-- **Aportaciones:** requieren una entidad legal (asociación o fundación) y un proveedor de pagos para cobros mensuales y certificados de donación.
-- **Edad mínima de registro:** depende del país.
-- Qué oye cada participante el día del evento: solo la base, o la base más una guía de su voz.
+- **Nombre** del evento.
+- **Canciones por encuentro:** una sola o un programa de varias (el diseño supone varias, en orden).
+- **Sacerdote obligatorio o no.** Exponer el Santísimo en la calle o hacer una procesión con él suele requerir el visto bueno de la parroquia y del obispado, además del permiso municipal para ocupar la plaza o la calle. Conviene que la ficha del lugar recoja también ese permiso.
+- **Datos personales:** apuntarse revela la participación en un acto religioso, dato de categoría especial del RGPD (art. 9). Hace falta consentimiento explícito.
+- **Aportaciones:** requieren una entidad legal y un proveedor de pagos.
+- **Edad mínima** de registro según el país.
+- **Qué oye cada participante el día:** solo la música, o la música con su voz de guía.
