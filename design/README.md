@@ -1,14 +1,14 @@
 # Diseño: flujo e interfaz de participación
 
-Diseño del flujo del participante y de las pantallas de móvil. La **versión 2 (cálida)** es la vigente; la versión 1 se conserva para comparar.
+Diseño del flujo del participante y de las pantallas de móvil. La **versión 2** (oscura, con la vidriera) es la vigente; la versión 1 se conserva para comparar.
 
-- **Lienzo editable:** https://claude.ai/artifact/Hkk4yG9unjmRy2ZoYzJ37e (abre en la página «Versión 2 · cálida»; privado de su propietario hasta que lo comparta).
+- **Lienzo editable:** https://claude.ai/artifact/Hkk4yG9unjmRy2ZoYzJ37e (abre en la página «Versión 2»; privado de su propietario hasta que lo comparta).
 - **Ver en la web (cualquier navegador):** https://enderhugin.github.io/mobile-audio-sync/ — se genera con `node design/build-pages.mjs <carpeta>` y se publica en la rama `gh-pages`.
 - **Fuente del lienzo:** [`canvas/`](canvas/). Son archivos `.dc.html` del editor de diseño: necesitan su entorno (`support.js`) para verse, así que GitHub no los muestra como página. Sirven como referencia de estructura, textos, colores y medidas para implementar la web en `web/`.
 
 ## Tono
 
-Hogar, quedada, encuentro, valentía, tradición y contemplación. No es para gente que sepa música: es para gente que quiere cantar y quedar en un lugar concreto.
+Una llamada, no un entretenimiento. Aventura, valentía, fidelidad, sacrificio y vuelta al hogar: «Hay cosas por las que merece la pena salir de casa», «cuentan contigo», «al terminar, volverás a casa». No es para gente que sepa música: es para gente que quiere cantar y quedar en un lugar concreto.
 
 ## Flujo (versión 2)
 
@@ -31,19 +31,21 @@ La organización crea cada encuentro y solo puede publicarlo cuando la composici
 
 ## Identidad
 
-- **Símbolo:** un rosetón de catedral. Cada persona es un cristal: su rosetón personal tiene seis pétalos con los colores de cómo viene.
-- **Símbolos:** custodia (orar), nota (cantar), corazón (aportar), vieira (camino), pin con cruz (plaza), palma (valentía), cruz, estrella (encuentro), vela (orar desde casa), banderines (quedada).
+- **Símbolo:** un rosetón de vidrio emplomado en un muro de piedra, con la luz atravesándolo y la Hostia en el centro: estabilidad (la piedra), altar (el centro) y pertenencia (muchos cristales, una sola luz). Se genera con `design/pages/make_vitral.py`.
+- **Rosetón personal:** seis pétalos con los colores de cómo viene cada persona, enmarcados en oro.
+- **Símbolos:** custodia (el altar), casa (volver al hogar), estandarte (la llamada), palma (el martirio), cruz (la fe), vieira (el camino), pin con cruz (la plaza), nota (poner la voz), vela (velar desde casa), corazón (sostener la causa).
 - **Tipografías:** Fraunces (títulos) y Nunito (texto).
 
 | Color | Uso | Valor |
 |---|---|---|
-| Granate | Entrega; botones principales | `#8C1C2B` |
-| Oro | Lo eterno, el Santísimo | `#E2B23C` (texto `#8A6416`) |
-| Marfil | Fondo, hogar | `#FBF5EA` |
-| Tinta | Texto | `#2B1E16` |
-| Verde | Cantar | `#3E8A3A` (texto `#2F6B2C`) |
-| Azul | Orar | `#23509E` |
-| Naranja | Aportar | `#E07B24` (texto `#A44E0E`) |
+| Noche | Fondo | `#0F0B08` |
+| Piedra | Superficies y bordes | `#1A130F`, `#3A2C21` |
+| Marfil | Texto | `#F4EADB` (secundario `#BFAE97`) |
+| Oro | Lo eterno; botones principales | `#E2B23C` |
+| Granate | Entrega; la convocatoria | `#8C1C2B` (fondo `#3D0C14`) |
+| Verde | Poner la voz | `#3E8A3A` (texto `#7CC47A`) |
+| Azul | Velar en oración | `#2D5FB8` (texto `#8EAEF0`) |
+| Naranja | Sostener la causa | `#E07B24` (texto `#F2A65E`) |
 
 El color de cada forma de apoyo va siempre con su icono y su nombre.
 
@@ -61,7 +63,7 @@ El color de cada forma de apoyo va siempre con su icono y su nombre.
 | `Cancion.dc.html` | Canciones del encuentro (interactiva) |
 | `TuVoz.dc.html` | Elegir voz (interactiva) |
 | `TusDatos.dc.html` | Último paso |
-| `MiEncuentro.dc.html` | Entrada con cuenta atrás |
+| `MiEncuentro.dc.html` | Mi puesto: convocatoria con cuenta atrás |
 | `Ensayar.dc.html` | Ensayo con letra (interactiva) |
 | `DiaDelEncuentro.dc.html` | El día, ante el Santísimo |
 | `Organizador.dc.html` | Crear un encuentro (interactiva) |
