@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Tus datos</title>
+<title>Paso 5: tus datos</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -17,43 +17,36 @@ input::placeholder{color:#9C8B75}
 </helmet>
 <div style="width: 390px; height: 844px; box-sizing: border-box; padding: 12px 20px 20px; display: flex; flex-direction: column; gap: 14px; background: #0F0B08; font-family: Nunito, system-ui, sans-serif; color: #F4EADB; overflow: hidden">
 
-<div style="display: flex; align-items: center; justify-content: space-between; height: 44px">
-<a href="TuVoz.dc.html" style="display: flex; align-items: center; gap: 4px; height: 44px; padding-right: 8px; font-size: 15px; font-weight: 700; color: #F4EADB; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Tu voz</a>
-<span style="font-size: 13px; font-weight: 700; color: #BFAE97">Paso 6 de 6</span>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: center; height: 44px">
+<a href="TuVoz.dc.html" aria-label="Atrás" style="width: 44px; height: 44px; margin-left: -12px; display: flex; align-items: center; justify-content: center; color: #F4EADB; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>
+<span style="font-size: 14px; font-weight: 700; color: #BFAE97">Paso 5 de 5 · Tus datos</span>
 </div>
-<div aria-hidden="true" style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px"><span style="height: 4px; border-radius: 2px; background: #E2B23C"></span><span style="height: 4px; border-radius: 2px; background: #E2B23C"></span><span style="height: 4px; border-radius: 2px; background: #E2B23C"></span><span style="height: 4px; border-radius: 2px; background: #E2B23C"></span><span style="height: 4px; border-radius: 2px; background: #E2B23C"></span><span style="height: 4px; border-radius: 2px; background: #E2B23C"></span></div>
-
-<div style="display: flex; flex-direction: column; gap: 4px; margin-top: 2px">
-<h1 style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 30px; line-height: 36px; font-weight: 700">Último paso</h1>
-<p style="margin: 0; font-size: 15px; line-height: 21px; color: #BFAE97">Para guardarte el sitio y avisarte cuando llegue el día.</p>
+<div aria-hidden="true" style="height: 3px; border-radius: 2px; background: #E2B23C"></div>
 </div>
 
-<section aria-label="Lo que has elegido" style="display: flex; gap: 14px; align-items: center; padding: 14px 16px; background: #1A130F; border: 1px solid #4D3B1C; border-radius: 18px">
-<svg width="60" height="60" viewBox="0 0 48 48" aria-hidden="true" style="flex: none"><circle cx="24" cy="24" r="22.3" fill="#0B0806" stroke="#E2B23C" stroke-width="1.4"/><g stroke="#0B0806" stroke-width="1.5"><circle cx="24" cy="11" r="7.6" fill="#3E8A3A"/><circle cx="35.3" cy="17.5" r="7.6" fill="#2D5FB8"/><circle cx="35.3" cy="30.5" r="7.6" fill="#3E8A3A"/><circle cx="24" cy="37" r="7.6" fill="#2D5FB8"/><circle cx="12.7" cy="30.5" r="7.6" fill="#3E8A3A"/><circle cx="12.7" cy="17.5" r="7.6" fill="#2D5FB8"/></g><circle cx="24" cy="24" r="6" fill="#E2B23C" stroke="#0B0806" stroke-width="1.5"/></svg>
-<div style="display: flex; flex-direction: column; gap: 3px; font-size: 14px; line-height: 20px; color: #D9CCB8">
-<div><b style="color: #F4EADB">[FECHA 1]</b> · 21:00 tu hora</div>
-<div><b style="color: #F4EADB">Camino del río</b></div>
-<div>Cantas <b style="color: #7CC47A">la melodía</b> y <b style="color: #8EAEF0">oras</b></div>
+<div style="display: flex; flex-direction: column; gap: 6px; margin-top: 4px">
+<h1 style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 28px; line-height: 34px; font-weight: 700">Tus datos</h1>
+<p style="margin: 0; font-size: 15px; line-height: 21px; color: #BFAE97">Primer encuentro · Camino del río · La melodía</p>
 </div>
-</section>
 
 <div style="display: flex; flex-direction: column; gap: 6px">
-<label for="datos-nombre" style="font-size: 14px; line-height: 18px; font-weight: 800">Tu nombre</label>
-<input id="datos-nombre" type="text" defaultValue="Ana" style="height: 48px; box-sizing: border-box; padding: 0 14px; border: 1px solid #4D3B1C; border-radius: 14px; background: #241A14; font: 16px Nunito, sans-serif; color: #F4EADB">
+<label for="datos-nombre" style="font-size: 14px; line-height: 18px; font-weight: 800">Nombre</label>
+<input id="datos-nombre" type="text" defaultValue="Ana" style="height: 48px; box-sizing: border-box; padding: 0 14px; border: 1px solid #3A2C21; border-radius: 14px; background: #1A130F; font: 16px Nunito, sans-serif; color: #F4EADB">
 </div>
 <div style="display: flex; flex-direction: column; gap: 6px">
 <label for="datos-contacto" style="font-size: 14px; line-height: 18px; font-weight: 800">Correo o móvil</label>
-<input id="datos-contacto" type="text" placeholder="Para avisarte del encuentro" style="height: 48px; box-sizing: border-box; padding: 0 14px; border: 1px solid #4D3B1C; border-radius: 14px; background: #241A14; font: 16px Nunito, sans-serif; color: #F4EADB">
+<input id="datos-contacto" type="text" placeholder="Para avisarte" style="height: 48px; box-sizing: border-box; padding: 0 14px; border: 1px solid #3A2C21; border-radius: 14px; background: #1A130F; font: 16px Nunito, sans-serif; color: #F4EADB">
 </div>
 
-<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 2px">
 <div style="display: flex; align-items: flex-start; gap: 10px">
 <input id="datos-privacidad" type="checkbox" defaultChecked="{{ true }}" style="flex: none; width: 22px; height: 22px; margin: 0; accent-color: #E2B23C">
-<label for="datos-privacidad" style="font-size: 14px; line-height: 20px; color: #D9CCB8">Acepto que guardéis mis datos para organizar el encuentro, sabiendo que es un acto religioso. <a href="#">Privacidad</a></label>
+<label for="datos-privacidad" style="font-size: 14px; line-height: 20px; color: #D9CCB8">Acepto la <a href="#">política de privacidad</a> para un acto religioso</label>
 </div>
 <div style="display: flex; align-items: flex-start; gap: 10px">
 <input id="datos-edad" type="checkbox" defaultChecked="{{ true }}" style="flex: none; width: 22px; height: 22px; margin: 0; accent-color: #E2B23C">
-<label for="datos-edad" style="font-size: 14px; line-height: 20px; color: #D9CCB8">Tengo [EDAD MÍNIMA] años o más, o vengo con mi familia</label>
+<label for="datos-edad" style="font-size: 14px; line-height: 20px; color: #D9CCB8">Tengo [EDAD MÍNIMA] años o vengo con mi familia</label>
 </div>
 </div>
 

@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Proponer una plaza o un camino</title>
+<title>Proponer un lugar</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -15,54 +15,49 @@ a{color:#F4EADB}a:hover{color:#FFFFFF}
 input::placeholder{color:#9C8B75}
 </style>
 </helmet>
-<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 12px 20px 20px; display: flex; flex-direction: column; gap: 12px; background: #0F0B08; font-family: Nunito, system-ui, sans-serif; color: #F4EADB; overflow: hidden">
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 12px 20px 20px; display: flex; flex-direction: column; gap: 14px; background: #0F0B08; font-family: Nunito, system-ui, sans-serif; color: #F4EADB; overflow: hidden">
 
-<a href="Lugares.dc.html" style="align-self: flex-start; display: flex; align-items: center; gap: 4px; height: 44px; padding-right: 8px; font-size: 15px; font-weight: 700; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Lugares</a>
-
-<div style="display: flex; flex-direction: column; gap: 4px">
-<h1 style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 28px; line-height: 34px; font-weight: 700">Propón un lugar</h1>
-<p style="margin: 0; font-size: 15px; line-height: 21px; color: #BFAE97">Una plaza donde plantarse, o un camino para recorrer cantando.</p>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: center; height: 44px">
+<a href="Lugares.dc.html" aria-label="Atrás" style="width: 44px; height: 44px; margin-left: -12px; display: flex; align-items: center; justify-content: center; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>
+<span style="font-size: 14px; font-weight: 700; color: #BFAE97">Paso 1 de 5 · Lugar</span>
+</div>
+<div aria-hidden="true" style="height: 3px; border-radius: 2px; background: #3A2C21"><div style="height: 3px; width: 20%; border-radius: 2px; background: #E2B23C"></div></div>
 </div>
 
-<div role="group" aria-label="Tipo de lugar" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; padding: 4px; background: #241A14; border: 1px solid #3A2C21; border-radius: 16px">
-<button type="button" aria-pressed="{{plazaPressed}}" onClick="{{setPlaza}}" style="display: flex; align-items: center; justify-content: center; gap: 8px; height: 44px; border: none; border-radius: 12px; background: {{plazaBg}}; color: {{plazaFg}}; font: 800 15px Nunito, sans-serif; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><path d="M12 6.5v6M9.5 8.5h5"/></svg>Plaza</button>
-<button type="button" aria-pressed="{{caminoPressed}}" onClick="{{setCamino}}" style="display: flex; align-items: center; justify-content: center; gap: 8px; height: 44px; border: none; border-radius: 12px; background: {{caminoBg}}; color: {{caminoFg}}; font: 800 15px Nunito, sans-serif; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5 3.6 10.2a8.6 7.6 0 0 1 16.8 0z"/><path d="M12 20.5 7.4 4.6M12 20.5V3M12 20.5l4.6-15.9"/></svg>Camino</button>
+<h1 style="margin: 4px 0 0; font-family: Fraunces, Georgia, serif; font-size: 28px; line-height: 34px; font-weight: 700">Proponer un lugar</h1>
+
+<div role="group" aria-label="Tipo de lugar" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; padding: 4px; background: #241A14; border-radius: 16px">
+<button type="button" aria-pressed="{{plazaPressed}}" onClick="{{setPlaza}}" style="height: 42px; border: none; border-radius: 12px; background: {{plazaBg}}; color: {{plazaFg}}; font: 800 15px Nunito, sans-serif; cursor: pointer">Plaza</button>
+<button type="button" aria-pressed="{{caminoPressed}}" onClick="{{setCamino}}" style="height: 42px; border: none; border-radius: 12px; background: {{caminoBg}}; color: {{caminoFg}}; font: 800 15px Nunito, sans-serif; cursor: pointer">Camino</button>
 </div>
 
-<div style="position: relative; width: 350px; height: 230px; flex: none; border-radius: 20px; overflow: hidden; border: 1px solid #4D3B1C">
-<svg width="350" height="230" viewBox="0 20 350 230" aria-hidden="true" style="position: absolute; left: 0; top: 0"><rect y="0" width="350" height="280" fill="#1E1712"/><path d="M-10 52 C 80 30, 160 70, 360 38" fill="none" stroke="#1B3352" stroke-width="24"/><rect x="250" y="182" width="90" height="86" rx="14" fill="#1C2A17"/><circle cx="275" cy="210" r="7" fill="#2A3D22"/><circle cx="305" cy="238" r="9" fill="#2A3D22"/><circle cx="320" cy="202" r="6" fill="#2A3D22"/><g stroke="#3A2D22" stroke-width="12" stroke-linecap="round" fill="none"><path d="M-10 112 H360"/><path d="M-10 208 H240"/><path d="M95 -10 V290"/><path d="M215 -10 V290"/><path d="M-10 268 L240 182"/></g><rect x="111" y="124" width="92" height="72" rx="10" fill="#2E241C" stroke="#4A3A2B" stroke-width="2"/><circle cx="157" cy="172" r="8" fill="#1B3352" stroke="#4A3A2B" stroke-width="2"/></svg>
-
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 14px; line-height: 20px; color: #BFAE97">{{hint}}</p>
+<div style="position: relative; width: 350px; height: 240px; flex: none; border-radius: 20px; overflow: hidden; border: 1px solid #3A2C21">
+<svg width="350" height="240" viewBox="0 20 350 240" aria-hidden="true" style="position: absolute; left: 0; top: 0"><rect y="0" width="350" height="280" fill="#1E1712"/><path d="M-10 52 C 80 30, 160 70, 360 38" fill="none" stroke="#1B3352" stroke-width="24"/><rect x="250" y="182" width="90" height="86" rx="14" fill="#1C2A17"/><g stroke="#3A2D22" stroke-width="12" stroke-linecap="round" fill="none"><path d="M-10 112 H360"/><path d="M-10 208 H240"/><path d="M95 -10 V290"/><path d="M215 -10 V290"/><path d="M-10 268 L240 182"/></g><rect x="111" y="124" width="92" height="72" rx="10" fill="#2E241C" stroke="#4A3A2B" stroke-width="2"/></svg>
 <sc-if value="{{camino}}" hint-placeholder-val="{{ true }}">
-<svg width="350" height="230" viewBox="0 20 350 230" aria-hidden="true" style="position: absolute; left: 0; top: 0"><path d="M40 208 H215 V112 H310" fill="none" stroke="#E2B23C" stroke-width="5" stroke-dasharray="1 9" stroke-linecap="round" stroke-linejoin="round"/></svg>
-<div aria-hidden="true" style="position: absolute; left: 24px; top: 172px; width: 32px; height: 32px; box-sizing: border-box; border-radius: 50%; background: #0F0B08; border: 2.5px solid #E2B23C; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E2B23C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5 3.6 10.2a8.6 7.6 0 0 1 16.8 0z"/><path d="M12 20.5 7.4 4.6M12 20.5V3M12 20.5l4.6-15.9"/></svg></div>
-<div aria-hidden="true" style="position: absolute; left: 296px; top: 78px; width: 28px; height: 28px; box-sizing: border-box; border-radius: 50%; background: #8C1C2B; border: 2px solid #E2B23C; display: flex; align-items: center; justify-content: center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#F4EADB" stroke-width="3" stroke-linecap="round"><path d="M12 3v18M6 9h12"/></svg></div>
-<div style="position: absolute; left: 10px; top: 10px; padding: 6px 10px; border-radius: 10px; background: #0F0B08; border: 1px solid #4D3B1C; font-size: 13px; line-height: 18px; font-weight: 800">Recorrido de 0,9 km · toca para cambiarlo</div>
+<svg width="350" height="240" viewBox="0 20 350 240" aria-hidden="true" style="position: absolute; left: 0; top: 0"><path d="M40 208 H215 V112 H310" fill="none" stroke="#E2B23C" stroke-width="5" stroke-dasharray="1 9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<div aria-hidden="true" style="position: absolute; left: 26px; top: 174px; width: 28px; height: 28px; box-sizing: border-box; border-radius: 50%; background: #0F0B08; border: 2.5px solid #E2B23C"></div>
+<div aria-hidden="true" style="position: absolute; left: 296px; top: 78px; width: 28px; height: 28px; box-sizing: border-box; border-radius: 50%; background: #E2B23C"></div>
 </sc-if>
 <sc-if value="{{plaza}}" hint-placeholder-val="{{ false }}">
-<div aria-hidden="true" style="position: absolute; left: 137px; top: 112px; width: 40px; height: 40px; box-sizing: border-box; border-radius: 50%; background: #8C1C2B; border: 2.5px solid #E2B23C; box-shadow: 0 0 0 8px rgba(226,178,60,0.18); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4EADB" stroke-width="2.6" stroke-linecap="round"><path d="M12 4v16M6 9.5h12"/></svg></div>
-<div style="position: absolute; left: 10px; top: 10px; padding: 6px 10px; border-radius: 10px; background: #0F0B08; border: 1px solid #4D3B1C; font-size: 13px; line-height: 18px; font-weight: 800">Toca el mapa donde está la plaza</div>
+<div aria-hidden="true" style="position: absolute; left: 139px; top: 122px; width: 36px; height: 36px; box-sizing: border-box; border-radius: 50%; background: #E2B23C; box-shadow: 0 0 0 8px rgba(226,178,60,0.18)"></div>
 </sc-if>
+</div>
 </div>
 
 <div style="display: flex; flex-direction: column; gap: 6px">
-<label for="prop-nombre" style="font-size: 14px; line-height: 18px; font-weight: 800">Nombre del lugar</label>
-<input id="prop-nombre" type="text" placeholder="{{placeholder}}" style="height: 46px; box-sizing: border-box; padding: 0 14px; border: 1px solid #4D3B1C; border-radius: 14px; background: #241A14; font: 16px Nunito, sans-serif; color: #F4EADB">
+<label for="prop-nombre" style="font-size: 14px; line-height: 18px; font-weight: 800">Nombre</label>
+<input id="prop-nombre" type="text" placeholder="{{placeholder}}" style="height: 46px; box-sizing: border-box; padding: 0 14px; border: 1px solid #3A2C21; border-radius: 14px; background: #1A130F; font: 16px Nunito, sans-serif; color: #F4EADB">
 </div>
 
-<fieldset style="margin: 0; padding: 0; border: none; display: flex; flex-direction: column; gap: 8px">
-<legend style="padding: 0; margin-bottom: 8px; font-size: 14px; line-height: 18px; font-weight: 800">¿Hay un sacerdote que pueda exponer el Santísimo?</legend>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
-<button type="button" aria-pressed="true" style="height: 44px; border: 2px solid #E2B23C; border-radius: 14px; background: #2A2110; font: 800 14px Nunito, sans-serif; color: #E9C46A">Sí, hablo con él</button>
-<button type="button" aria-pressed="false" style="height: 44px; border: 1px solid #3A2C21; border-radius: 14px; background: #1A130F; font: 800 14px Nunito, sans-serif; color: #F4EADB">Aún no</button>
-</div>
-</fieldset>
-
-<div style="display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; background: #2A2110; border: 1px solid #4D3B1C; border-radius: 16px; font-size: 13px; line-height: 19px; color: #E6D9C3">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E2B23C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="12" cy="9" r="2.6"/><path d="M12 2.5v2M12 13.5v2M5.5 9h2M16.5 9h2M7.4 4.4l1.4 1.4M15.2 12.2l1.4 1.4M7.4 13.6l1.4-1.4M15.2 5.8l1.4-1.4M12 15.5v4.5M9 21.5h6M10.3 18h3.4"/></svg>
-<span>Se habilita cuando se apuntan <b style="color: #F4EADB">25 personas</b> y un sacerdote confirma que <b style="color: #F4EADB">expondrá el Santísimo</b>.</span>
+<div style="display: flex; align-items: flex-start; gap: 10px">
+<input id="prop-sacerdote" type="checkbox" style="flex: none; width: 22px; height: 22px; margin: 0; accent-color: #E2B23C">
+<label for="prop-sacerdote" style="font-size: 14px; line-height: 20px; color: #D9CCB8">Conozco a un sacerdote que puede exponer el Santísimo aquí</label>
 </div>
 
-<a href="Lugar.dc.html" style="margin-top: auto; display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 18px; background: #E2B23C; color: #120D0A; font-size: 17px; font-weight: 800; text-decoration: none">Proponer y apuntarme</a>
+<a href="Lugar.dc.html" style="margin-top: auto; display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 18px; background: #E2B23C; color: #120D0A; font-size: 17px; font-weight: 800; text-decoration: none">Proponer</a>
 
 </div>
 </x-dc>
@@ -80,6 +75,7 @@ caminoBg: camino ? '#E2B23C' : 'transparent',
 caminoFg: camino ? '#120D0A' : '#F4EADB',
 plazaBg: camino ? 'transparent' : '#E2B23C',
 plazaFg: camino ? '#F4EADB' : '#120D0A',
+hint: camino ? 'Toca el mapa donde empieza y donde acaba.' : 'Toca el mapa donde está la plaza.',
 placeholder: camino ? 'Ej.: Del puente a la iglesia' : 'Ej.: Plaza de la Fuente',
 setCamino: () => this.setState({ tipo: 'camino' }),
 setPlaza: () => this.setState({ tipo: 'plaza' })

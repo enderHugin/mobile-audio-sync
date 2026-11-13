@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>¿Cómo vienes?</title>
+<title>Paso 2: cómo vienes</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -14,49 +14,45 @@ body{margin:0}
 a{color:#F4EADB}a:hover{color:#FFFFFF}
 </style>
 </helmet>
-<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 12px 20px 20px; display: flex; flex-direction: column; gap: 12px; background: #0F0B08; font-family: Nunito, system-ui, sans-serif; color: #F4EADB; overflow: hidden">
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 12px 20px 20px; display: flex; flex-direction: column; gap: 14px; background: #0F0B08; font-family: Nunito, system-ui, sans-serif; color: #F4EADB; overflow: hidden">
 
-<div style="display: flex; align-items: center; justify-content: space-between; height: 44px">
-<a href="Lugar.dc.html" style="display: flex; align-items: center; gap: 4px; height: 44px; padding-right: 8px; font-size: 15px; font-weight: 700; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Camino del río</a>
-<span style="font-size: 13px; font-weight: 700; color: #BFAE97">Paso 3 de 6</span>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: center; height: 44px">
+<a href="Lugar.dc.html" aria-label="Atrás" style="width: 44px; height: 44px; margin-left: -12px; display: flex; align-items: center; justify-content: center; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>
+<span style="font-size: 14px; font-weight: 700; color: #BFAE97">Paso 2 de 5 · Cómo vienes</span>
 </div>
-<div aria-hidden="true" style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px"><span style="height: 4px; border-radius: 2px; background: #E2B23C"></span><span style="height: 4px; border-radius: 2px; background: #E2B23C"></span><span style="height: 4px; border-radius: 2px; background: #E2B23C"></span><span style="height: 4px; border-radius: 2px; background: #3A2C21"></span><span style="height: 4px; border-radius: 2px; background: #3A2C21"></span><span style="height: 4px; border-radius: 2px; background: #3A2C21"></span></div>
-
-<div style="display: flex; flex-direction: column; gap: 4px; margin-top: 4px">
-<h1 style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 30px; line-height: 36px; font-weight: 700">¿Cómo vienes?</h1>
-<p style="margin: 0; font-size: 15px; line-height: 21px; color: #BFAE97">Elige una o varias. Cada forma tiene su color en tu rosetón.</p>
+<div aria-hidden="true" style="height: 3px; border-radius: 2px; background: #3A2C21"><div style="height: 3px; width: 40%; border-radius: 2px; background: #E2B23C"></div></div>
 </div>
 
-<div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 6px 0">
-<svg width="104" height="104" viewBox="0 0 48 48" aria-hidden="true" style="filter: drop-shadow(0 0 14px rgba(226,178,60,0.25))"><circle cx="24" cy="24" r="22.3" fill="#0B0806" stroke="#E2B23C" stroke-width="1.4"/><g stroke="#0B0806" stroke-width="1.5"><circle cx="24" cy="11" r="7.6" fill="{{p0}}"/><circle cx="35.3" cy="17.5" r="7.6" fill="{{p1}}"/><circle cx="35.3" cy="30.5" r="7.6" fill="{{p2}}"/><circle cx="24" cy="37" r="7.6" fill="{{p3}}"/><circle cx="12.7" cy="30.5" r="7.6" fill="{{p4}}"/><circle cx="12.7" cy="17.5" r="7.6" fill="{{p5}}"/></g><circle cx="24" cy="24" r="6" fill="#E2B23C" stroke="#0B0806" stroke-width="1.5"/></svg>
-<div aria-live="polite" style="font-family: Fraunces, Georgia, serif; font-size: 19px; line-height: 24px; font-weight: 700; text-align: center">{{label}}</div>
+<div style="display: flex; flex-direction: column; gap: 6px; margin-top: 4px">
+<h1 style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 28px; line-height: 34px; font-weight: 700">¿Cómo vienes?</h1>
+<p style="margin: 0; font-size: 15px; line-height: 21px; color: #BFAE97">Puedes elegir varias.</p>
 </div>
 
 <div style="display: flex; flex-direction: column; gap: 10px">
 <button type="button" aria-pressed="{{cantoPressed}}" onClick="{{toggleCanto}}" style="display: flex; align-items: center; gap: 14px; width: 100%; padding: 14px 16px; text-align: left; border: 2px solid {{cantoBorder}}; background: {{cantoBg}}; border-radius: 18px; font-family: Nunito, sans-serif; color: #F4EADB; cursor: pointer">
-<span aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 50%; background: #3E8A3A; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F4EADB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span>
-<span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 17px; line-height: 22px; font-weight: 800">Cantar</span><span style="font-size: 14px; line-height: 20px; color: #BFAE97">Eliges canción y voz. Sin saber música</span></span>
-<sc-if value="{{canto}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: #3E8A3A; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F4EADB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></sc-if>
-<sc-if value="{{noCanto}}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; box-sizing: border-box; border-radius: 50%; border: 2px solid #6E5946"></span></sc-if>
+<span aria-hidden="true" style="flex: none; width: 42px; height: 42px; border-radius: 50%; background: #3E8A3A; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4EADB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 17px; line-height: 22px; font-weight: 800">Cantar</span><span style="font-size: 14px; line-height: 20px; color: #BFAE97">No hace falta saber música</span></span>
+<sc-if value="{{canto}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="flex: none; width: 26px; height: 26px; border-radius: 50%; background: #3E8A3A; display: flex; align-items: center; justify-content: center"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F4EADB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></sc-if>
+<sc-if value="{{noCanto}}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="flex: none; width: 26px; height: 26px; box-sizing: border-box; border-radius: 50%; border: 2px solid #4D3B1C"></span></sc-if>
 </button>
 
 <button type="button" aria-pressed="{{oracionPressed}}" onClick="{{toggleOracion}}" style="display: flex; align-items: center; gap: 14px; width: 100%; padding: 14px 16px; text-align: left; border: 2px solid {{oracionBorder}}; background: {{oracionBg}}; border-radius: 18px; font-family: Nunito, sans-serif; color: #F4EADB; cursor: pointer">
-<span aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 50%; background: #2D5FB8; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2C75C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="2.6"/><path d="M12 2.5v2M12 13.5v2M5.5 9h2M16.5 9h2M7.4 4.4l1.4 1.4M15.2 12.2l1.4 1.4M7.4 13.6l1.4-1.4M15.2 5.8l1.4-1.4M12 15.5v4.5M9 21.5h6M10.3 18h3.4"/></svg></span>
+<span aria-hidden="true" style="flex: none; width: 42px; height: 42px; border-radius: 50%; background: #2D5FB8; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2C75C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="2.6"/><path d="M12 2.5v2M12 13.5v2M5.5 9h2M16.5 9h2M7.4 4.4l1.4 1.4M15.2 12.2l1.4 1.4M7.4 13.6l1.4-1.4M15.2 5.8l1.4-1.4M12 15.5v4.5M9 21.5h6M10.3 18h3.4"/></svg></span>
 <span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 17px; line-height: 22px; font-weight: 800">Orar</span><span style="font-size: 14px; line-height: 20px; color: #BFAE97">Ante el Santísimo, allí o desde casa</span></span>
-<sc-if value="{{oracion}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: #2D5FB8; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F4EADB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></sc-if>
-<sc-if value="{{noOracion}}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; box-sizing: border-box; border-radius: 50%; border: 2px solid #6E5946"></span></sc-if>
+<sc-if value="{{oracion}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="flex: none; width: 26px; height: 26px; border-radius: 50%; background: #2D5FB8; display: flex; align-items: center; justify-content: center"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F4EADB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></sc-if>
+<sc-if value="{{noOracion}}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="flex: none; width: 26px; height: 26px; box-sizing: border-box; border-radius: 50%; border: 2px solid #4D3B1C"></span></sc-if>
 </button>
 
 <button type="button" aria-pressed="{{aportePressed}}" onClick="{{toggleAporte}}" style="display: flex; align-items: center; gap: 14px; width: 100%; padding: 14px 16px; text-align: left; border: 2px solid {{aporteBorder}}; background: {{aporteBg}}; border-radius: 18px; font-family: Nunito, sans-serif; color: #F4EADB; cursor: pointer">
-<span aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 50%; background: #E07B24; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#120D0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
+<span aria-hidden="true" style="flex: none; width: 42px; height: 42px; border-radius: 50%; background: #E07B24; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#120D0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
 <span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 17px; line-height: 22px; font-weight: 800">Aportar</span><span style="font-size: 14px; line-height: 20px; color: #BFAE97">Una vez o cada mes</span></span>
-<sc-if value="{{aporte}}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: #E07B24; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#120D0A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></sc-if>
-<sc-if value="{{noAporte}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; box-sizing: border-box; border-radius: 50%; border: 2px solid #6E5946"></span></sc-if>
+<sc-if value="{{aporte}}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="flex: none; width: 26px; height: 26px; border-radius: 50%; background: #E07B24; display: flex; align-items: center; justify-content: center"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#120D0A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></sc-if>
+<sc-if value="{{noAporte}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="flex: none; width: 26px; height: 26px; box-sizing: border-box; border-radius: 50%; border: 2px solid #4D3B1C"></span></sc-if>
 </button>
 </div>
 
-<div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px">
-<a href="Sacerdote.dc.html" style="display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; font-size: 14px; line-height: 20px; font-weight: 700; color: #E9C46A; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8"/><path d="M8 3c0 6-.8 12-2.6 18H9.6L11 12"/><path d="M16 3c0 6 .8 12 2.6 18h-4.2L13 12"/><path d="M7.4 16.5v3M5.9 18h3M16.6 16.5v3M15.1 18h3"/></svg>¿Eres sacerdote? Ofrécete para exponer o confesar</a>
+<div style="margin-top: auto">
 <sc-if value="{{anySelected}}" hint-placeholder-val="{{ true }}">
 <a href="{{next}}" style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 18px; background: #E2B23C; color: #120D0A; font-size: 17px; font-weight: 800; text-decoration: none">Continuar</a>
 </sc-if>
@@ -74,28 +70,16 @@ const s = this.state || {};
 const canto = s.canto ?? true;
 const oracion = s.oracion ?? true;
 const aporte = s.aporte ?? false;
-const colors = [];
-const parts = [];
-if (canto) { colors.push('#3E8A3A'); parts.push('cantas'); }
-if (oracion) { colors.push('#2D5FB8'); parts.push('oras'); }
-if (aporte) { colors.push('#E07B24'); parts.push('aportas'); }
-const petal = function (i) { return colors.length ? colors[i % colors.length] : '#3A2C21'; };
-let label = 'Elige cómo vienes';
-if (parts.length) {
-const text = parts.length === 1 ? parts[0] : parts.slice(0, -1).join(', ') + ' y ' + parts[parts.length - 1];
-label = text.charAt(0).toUpperCase() + text.slice(1);
-}
+const any = canto || oracion || aporte;
 const look = function (on, color, tint) { return { border: on ? color : '#3A2C21', bg: on ? tint : '#1A130F' }; };
 const lc = look(canto, '#3E8A3A', '#14231A');
 const lo = look(oracion, '#2D5FB8', '#121B2E');
 const la = look(aporte, '#E07B24', '#2A1A0D');
 return {
-p0: petal(0), p1: petal(1), p2: petal(2), p3: petal(3), p4: petal(4), p5: petal(5),
-label: label,
 canto: canto, noCanto: !canto, oracion: oracion, noOracion: !oracion, aporte: aporte, noAporte: !aporte,
 cantoPressed: String(canto), oracionPressed: String(oracion), aportePressed: String(aporte),
 cantoBorder: lc.border, cantoBg: lc.bg, oracionBorder: lo.border, oracionBg: lo.bg, aporteBorder: la.border, aporteBg: la.bg,
-anySelected: colors.length > 0, noneSelected: colors.length === 0,
+anySelected: any, noneSelected: !any,
 next: canto ? 'Cancion.dc.html' : 'TusDatos.dc.html',
 toggleCanto: () => this.setState({ canto: !canto }),
 toggleOracion: () => this.setState({ oracion: !oracion }),

@@ -172,8 +172,8 @@
       "x": 0,
       "y": 1340,
       "w": 390,
-      "h": 900,
-      "title": "1 · Encuentros",
+      "h": 844,
+      "title": "Pestaña · Encuentros",
       "is_interactive": true,
       "page": "v2"
     },
@@ -182,7 +182,7 @@
       "y": 1340,
       "w": 390,
       "h": 844,
-      "title": "2 · Elegir lugar en el mapa",
+      "title": "Paso 1 · Lugar",
       "is_interactive": true,
       "page": "v2"
     },
@@ -191,7 +191,7 @@
       "y": 1340,
       "w": 390,
       "h": 844,
-      "title": "Proponer una plaza o un camino",
+      "title": "Paso 1 · Proponer lugar",
       "is_interactive": true,
       "page": "v2"
     },
@@ -200,7 +200,7 @@
       "y": 1340,
       "w": 390,
       "h": 844,
-      "title": "Ficha del lugar",
+      "title": "Paso 1 · Ficha del lugar",
       "is_interactive": true,
       "page": "v2"
     },
@@ -209,7 +209,7 @@
       "y": 2740,
       "w": 390,
       "h": 844,
-      "title": "3 · ¿Cómo vienes?",
+      "title": "Paso 2 · Cómo vienes",
       "is_interactive": true,
       "page": "v2"
     },
@@ -218,7 +218,7 @@
       "y": 2740,
       "w": 390,
       "h": 844,
-      "title": "4 · Elegir canción",
+      "title": "Paso 3 · Canciones",
       "is_interactive": true,
       "page": "v2"
     },
@@ -227,7 +227,7 @@
       "y": 2740,
       "w": 390,
       "h": 844,
-      "title": "5 · Elegir voz",
+      "title": "Paso 4 · Tu voz",
       "is_interactive": true,
       "page": "v2"
     },
@@ -236,7 +236,7 @@
       "y": 2740,
       "w": 390,
       "h": 844,
-      "title": "6 · Tus datos",
+      "title": "Paso 5 · Tus datos",
       "is_interactive": true,
       "page": "v2"
     },
@@ -245,7 +245,7 @@
       "y": 3980,
       "w": 390,
       "h": 844,
-      "title": "Mi encuentro",
+      "title": "Pestaña · Mi encuentro",
       "is_interactive": true,
       "page": "v2"
     },
@@ -254,7 +254,7 @@
       "y": 3980,
       "w": 390,
       "h": 844,
-      "title": "Ensayar",
+      "title": "Pestaña · Ensayar",
       "is_interactive": true,
       "page": "v2"
     },
@@ -283,6 +283,14 @@
       "title": "Sacerdotes: ofrecerse",
       "is_interactive": true,
       "page": "v2"
+    },
+    "Mapa.dc.html": {
+      "x": 3080,
+      "y": 0,
+      "w": 1240,
+      "h": 600,
+      "title": "Dónde está cada cosa",
+      "page": "v2"
     }
   },
   "order": [
@@ -303,6 +311,7 @@
     "Despues.dc.html",
     "Flujo2.dc.html",
     "Identidad.dc.html",
+    "Mapa.dc.html",
     "Encuentros.dc.html",
     "Lugares.dc.html",
     "ProponerLugar.dc.html",
@@ -363,13 +372,13 @@
       "y": -300,
       "text": "Versión 2: flujo e identidad",
       "kind": "title1",
-      "maxW": 3000,
+      "maxW": 4320,
       "page": "v2"
     },
     "v2_lugar": {
       "x": 0,
       "y": 1060,
-      "text": "Elegir encuentro y lugar",
+      "text": "Encuentros y paso 1: lugar",
       "kind": "title1",
       "maxW": 1800,
       "page": "v2"
@@ -377,7 +386,7 @@
     "v2_apuntarse": {
       "x": 0,
       "y": 2460,
-      "text": "Apuntarse",
+      "text": "Pasos 2 a 5 y sacerdotes",
       "kind": "title1",
       "maxW": 2270,
       "page": "v2"
@@ -385,7 +394,7 @@
     "v2_dia": {
       "x": 0,
       "y": 3700,
-      "text": "Prepararse, el día y la organización",
+      "text": "Mi encuentro, ensayar, el día y organización",
       "kind": "title1",
       "maxW": 1800,
       "page": "v2"

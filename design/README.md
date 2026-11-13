@@ -10,16 +10,22 @@ Diseño del flujo del participante y de las pantallas de móvil. La **versión 2
 
 Poco texto, claro y práctico. Quien llega ya sabe a qué viene, porque lo ha visto en un vídeo: la web es el medio de convocatoria. La emoción (pertenencia, hogar, estabilidad, altar, aventura, encuentro) la ponen la imagen y los símbolos, no las palabras.
 
-## Flujo (versión 2)
+## Estructura (versión 2)
 
-1. **Encuentros.** Lista de fechas fijadas por la organización, cada una con su cuenta atrás.
-2. **Lugar.** Mapa con plazas y caminos. Si no hay uno cerca, se propone tocando el mapa.
-3. **¿Cómo vienes?** Cantar, orar o aportar; una o varias.
-4. **Canciones.** Las del encuentro, en orden; se marcan las que se van a cantar.
-5. **Voz.** Sin lenguaje musical: «la melodía», «aguda de mujer», «grave de hombre»…
-6. **Tus datos.** Nombre y correo o móvil.
-7. **Mi encuentro.** Entrada con cuenta atrás, ensayar e invitar.
-8. **El día.** En el lugar, ante el Santísimo, todos a la vez en el mundo.
+Tres pestañas, siempre visibles abajo:
+
+- **Encuentros:** lista de encuentros, cada uno con su cuenta atrás. Al elegir uno, apuntarse en cinco pasos, uno por pantalla:
+  1. **Lugar:** mapa con plazas y caminos, ficha del lugar o proponer uno nuevo.
+  2. **Cómo vienes:** cantar, orar o aportar; una o varias.
+  3. **Canciones** (si cantas): las del encuentro, en orden.
+  4. **Tu voz** (si cantas): sin lenguaje musical.
+  5. **Tus datos:** nombre y correo o móvil.
+- **Mi encuentro:** cuenta atrás, cómo llegar, invitar si faltan personas, y la pantalla del día (se abre 30 minutos antes).
+- **Ensayar:** las canciones con la letra, voz de guía sí o no, más despacio.
+
+Aparte: «Soy sacerdote» (enlace al pie de Encuentros) y la pantalla de organización.
+
+Reglas de pantalla: arriba «Paso X de 5 · nombre» y una flecha para volver; una sola acción principal; nada que no ayude a decidir.
 
 ### Cómo se habilita un lugar
 
@@ -58,17 +64,18 @@ El color de cada forma de apoyo va siempre con su icono y su nombre.
 | Archivo | Pantalla |
 |---|---|
 | `Flujo2.dc.html` | Diagrama del flujo |
+| `Mapa.dc.html` | Dónde está cada cosa |
 | `Identidad.dc.html` | Rosetón, símbolos, colores y tipografías |
-| `Encuentros.dc.html` | Lista de encuentros con cuenta atrás |
-| `Lugares.dc.html` | Mapa y lista de lugares |
-| `ProponerLugar.dc.html` | Proponer plaza o camino (interactiva) |
-| `Lugar.dc.html` | Ficha del lugar y requisitos |
-| `Participar.dc.html` | ¿Cómo vienes? (interactiva) |
-| `Cancion.dc.html` | Canciones del encuentro (interactiva) |
-| `TuVoz.dc.html` | Elegir voz (interactiva) |
-| `TusDatos.dc.html` | Último paso |
-| `MiEncuentro.dc.html` | Tu encuentro con cuenta atrás |
-| `Ensayar.dc.html` | Ensayo con letra (interactiva) |
+| `Encuentros.dc.html` | Pestaña Encuentros: lista con cuenta atrás |
+| `Lugares.dc.html` | Paso 1: mapa y lista de lugares |
+| `ProponerLugar.dc.html` | Paso 1: proponer plaza o camino (interactiva) |
+| `Lugar.dc.html` | Paso 1: ficha del lugar |
+| `Participar.dc.html` | Paso 2: cómo vienes (interactiva) |
+| `Cancion.dc.html` | Paso 3: canciones (interactiva) |
+| `TuVoz.dc.html` | Paso 4: tu voz (interactiva) |
+| `TusDatos.dc.html` | Paso 5: tus datos |
+| `MiEncuentro.dc.html` | Pestaña Mi encuentro |
+| `Ensayar.dc.html` | Pestaña Ensayar (interactiva) |
 | `DiaDelEncuentro.dc.html` | El día, ante el Santísimo |
 | `Organizador.dc.html` | Crear un encuentro (interactiva) |
 | `Sacerdote.dc.html` | Sacerdotes: ofrecerse para exponer y confesar (interactiva) |
