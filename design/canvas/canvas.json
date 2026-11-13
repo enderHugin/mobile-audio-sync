@@ -164,7 +164,7 @@
       "x": 2120,
       "y": 0,
       "w": 880,
-      "h": 1240,
+      "h": 1600,
       "title": "Identidad: rosetón, símbolos y colores",
       "page": "v2"
     },
@@ -172,7 +172,7 @@
       "x": 0,
       "y": 1340,
       "w": 390,
-      "h": 1000,
+      "h": 900,
       "title": "1 · Encuentros",
       "is_interactive": true,
       "page": "v2"
@@ -274,6 +274,15 @@
       "title": "Organización: crear un encuentro",
       "is_interactive": true,
       "page": "v2"
+    },
+    "Sacerdote.dc.html": {
+      "x": 1880,
+      "y": 2740,
+      "w": 390,
+      "h": 844,
+      "title": "Sacerdotes: ofrecerse",
+      "is_interactive": true,
+      "page": "v2"
     }
   },
   "order": [
@@ -305,7 +314,8 @@
     "MiEncuentro.dc.html",
     "Ensayar.dc.html",
     "DiaDelEncuentro.dc.html",
-    "Organizador.dc.html"
+    "Organizador.dc.html",
+    "Sacerdote.dc.html"
   ],
   "notes": {
     "t_flujo": {
@@ -369,7 +379,7 @@
       "y": 2460,
       "text": "Apuntarse",
       "kind": "title1",
-      "maxW": 1800,
+      "maxW": 2270,
       "page": "v2"
     },
     "v2_dia": {

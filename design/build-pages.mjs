@@ -2,7 +2,7 @@
 // normales para publicarlas en GitHub Pages.
 // Uso: node design/build-pages.mjs <carpeta-salida> [página-del-lienzo]
 // La página del lienzo por defecto es "v2".
-import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -18,6 +18,9 @@ const boards = Object.entries(canvas.boards)
   .filter((b) => (b.page || firstPage) === pageId)
   .sort((a, b) => a.y - b.y || a.x - b.x);
 
+const assetsPath = join(here, 'pages', 'assets.json');
+const assets = existsSync(assetsPath) ? JSON.parse(readFileSync(assetsPath, 'utf8')) : {};
+const fixAssets = (s) => Object.entries(assets).reduce((acc, [blob, file]) => acc.split(blob).join('img/' + file), s);
 const htmlName = (file) => file.replace(/\.dc\.html$/, '.html');
 const fixLinks = (s) => s.replace(/\.dc\.html/g, '.html');
 const pick = (src, re, fallback) => {
@@ -47,7 +50,7 @@ ${helmet.trim()}
 </head>
 <body>
 <div id="app"></div>
-<template id="tpl">${fixLinks(body)}</template>
+<template id="tpl">${fixAssets(fixLinks(body))}</template>
 <script src="dc-lite.js"></script>
 <script>
 ${fixLinks(logic).trim()}
@@ -61,6 +64,11 @@ DC.mount(Component);
 mkdirSync(out, { recursive: true });
 copyFileSync(join(here, 'pages', 'dc-lite.js'), join(out, 'dc-lite.js'));
 writeFileSync(join(out, '.nojekyll'), '');
+const imgDir = join(here, 'pages', 'img');
+if (existsSync(imgDir)) {
+  mkdirSync(join(out, 'img'), { recursive: true });
+  for (const f of readdirSync(imgDir)) copyFileSync(join(imgDir, f), join(out, 'img', f));
+}
 
 for (const b of boards) {
   const src = readFileSync(join(canvasDir, b.file), 'utf8');
@@ -98,8 +106,7 @@ function tile(b) {
 }
 
 const start = boards.find((b) => b.file === 'Encuentros.dc.html') || boards.find((b) => b.w === 390);
-const portadaPath = join(here, 'pages', 'portada.svg');
-const portada = existsSync(portadaPath) ? readFileSync(portadaPath, 'utf8') : '';
+const portada = existsSync(join(here, 'pages', 'img', 'roseton-siguenza-identidad.jpg')) ? '<img src="img/roseton-siguenza-identidad.jpg" alt="Rosetón de la catedral de Sigüenza con la luz atravesando el vidrio" width="880" height="640">' : '';
 const today = new Date().toLocaleDateString("es-ES", { timeZone: "Europe/Madrid", day: "numeric", month: "long", year: "numeric" });
 const rosette = `<svg width="56" height="56" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#2B1E16"/><g stroke="#2B1E16" stroke-width="4"><circle cx="100" cy="30" r="22" fill="#3E8A3A"/><circle cx="135" cy="39.4" r="22" fill="#E2B23C"/><circle cx="160.6" cy="65" r="22" fill="#23509E"/><circle cx="170" cy="100" r="22" fill="#8C1C2B"/><circle cx="160.6" cy="135" r="22" fill="#E07B24"/><circle cx="135" cy="160.6" r="22" fill="#E2B23C"/><circle cx="100" cy="170" r="22" fill="#3E8A3A"/><circle cx="65" cy="160.6" r="22" fill="#8C1C2B"/><circle cx="39.4" cy="135" r="22" fill="#23509E"/><circle cx="30" cy="100" r="22" fill="#E2B23C"/><circle cx="39.4" cy="65" r="22" fill="#E07B24"/><circle cx="65" cy="39.4" r="22" fill="#8C1C2B"/></g><circle cx="100" cy="100" r="52" fill="#2B1E16"/><g stroke="#2B1E16" stroke-width="4"><circle cx="113" cy="68.6" r="15" fill="#23509E"/><circle cx="131.4" cy="87" r="15" fill="#E07B24"/><circle cx="131.4" cy="113" r="15" fill="#3E8A3A"/><circle cx="113" cy="131.4" r="15" fill="#8C1C2B"/><circle cx="87" cy="131.4" r="15" fill="#23509E"/><circle cx="68.6" cy="113" r="15" fill="#E07B24"/><circle cx="68.6" cy="87" r="15" fill="#3E8A3A"/><circle cx="87" cy="68.6" r="15" fill="#8C1C2B"/></g><circle cx="100" cy="100" r="19" fill="#E2B23C" stroke="#2B1E16" stroke-width="4"/><path d="M100 88v24M90 97h20" stroke="#2B1E16" stroke-width="5" stroke-linecap="round"/></svg>`;
 
@@ -113,7 +120,7 @@ const index = `<!doctype html>
 <style>
 body{margin:0;background:#0F0B08;color:#F4EADB;font-family:Nunito,system-ui,sans-serif}
 main{max-width:1100px;margin:0 auto;padding:0 20px 64px}
-.hero{position:relative;margin:0 -20px}.hero svg{display:block;width:100%;height:auto}.hero-text{position:relative;margin-top:-56px}
+.hero{position:relative;margin:0 -20px;background:#0F0B08}.hero img{display:block;width:100%;max-width:880px;height:auto;margin:0 auto}.hero-text{position:relative;margin-top:-56px}
 h1{margin:0;font-family:Fraunces,Georgia,serif;font-size:44px;line-height:50px}.eyebrow{font-size:12px;line-height:16px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#E2B23C;margin-bottom:6px}
 .lead{margin:12px 0 20px;font-size:17px;line-height:25px;color:#BFAE97;max-width:720px}
 .start{display:inline-flex;align-items:center;height:52px;padding:0 22px;border-radius:16px;background:#E2B23C;color:#120D0A;font-weight:800;font-size:17px;text-decoration:none}
@@ -133,10 +140,10 @@ footer a{color:#E9C46A}
 <main>
 <div class="hero">${portada}</div>
 <header class="hero-text"><div class="eyebrow">Diseño · prototipo</div><h1>Una Voz</h1></header>
-<p class="lead">Una hora, en cada plaza del mundo, ante el Santísimo. Este es el prototipo navegable: toca una pantalla para abrirla; dentro, los botones llevan a las siguientes. Los textos entre corchetes son datos que aún faltan.</p>
+<p class="lead">Prototipo navegable. Toca una pantalla para abrirla; dentro, los botones llevan a las siguientes. Los textos entre corchetes son datos que aún faltan.</p>
 ${start ? `<a class="start" href="${htmlName(start.file)}">Empezar el recorrido</a>` : ''}
 ${groups.map((g) => `<h2>${escapeHtml(g.title)}</h2>\n<div class="row">\n${g.items.map(tile).join('\n')}\n</div>`).join('\n')}
-<footer>Actualizado el ${today}. Fuente: <a href="https://github.com/enderHugin/mobile-audio-sync/tree/design/flujo-e-interfaz/design">rama design/flujo-e-interfaz</a>.</footer>
+<footer>Actualizado el ${today}. Fuente: <a href="https://github.com/enderHugin/mobile-audio-sync/tree/design/flujo-e-interfaz/design">rama design/flujo-e-interfaz</a>. Foto del rosetón de la catedral de Sigüenza: EventusBonus, <a href="https://commons.wikimedia.org/wiki/File:Roset%C3%B3n_interior_fachada_oeste_catedral_Sig%C3%BCenza.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, recortada y retocada.</footer>
 </main>
 </body>
 </html>
