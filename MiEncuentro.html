@@ -16,21 +16,17 @@ a{color:#F4EADB}a:hover{color:#FFFFFF}
 <template id="tpl">
 <div style="width: 390px; height: 844px; display: flex; flex-direction: column; background: #0F0B08; font-family: Nunito, system-ui, sans-serif; color: #F4EADB; overflow: hidden">
 
-<div style="position: relative; width: 390px; height: 220px; flex: none">
-<img src="img/roseton-siguenza-franja.jpg" alt="Detalle del rosetón con la luz atravesando el vidrio" style="display: block; width: 390px; height: 220px; object-fit: cover">
-</div>
+<img src="img/roseton-siguenza-franja.jpg" alt="Detalle del rosetón con la luz atravesando el vidrio" style="display: block; flex: none; width: 390px; height: 150px; object-fit: cover; object-position: 50% 30%">
 
-<main style="flex: 1; min-height: 0; box-sizing: border-box; margin-top: -38px; padding: 0 20px 14px; display: flex; flex-direction: column; gap: 14px; position: relative">
+<main style="flex: 1; min-height: 0; box-sizing: border-box; padding: 16px 20px 14px; display: flex; flex-direction: column; gap: 14px">
 
-<div style="display: flex; flex-direction: column; gap: 4px">
-<h1 style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 30px; line-height: 36px; font-weight: 700">Tu encuentro</h1>
-</div>
+<h1 style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 28px; line-height: 34px; font-weight: 700">Mi encuentro</h1>
 
-<article style="display: flex; flex-direction: column; border-radius: 22px; overflow: hidden; border: 1px solid #6B1A28">
-<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px 16px 16px; background: #3D0C14">
-<div style="display: flex; align-items: center; justify-content: space-between">
+<article style="border-radius: 20px; overflow: hidden; border: 1px solid #3A2C21">
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 14px 16px 16px; background: #3D0C14">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
 <span style="font-family: Fraunces, Georgia, serif; font-size: 20px; line-height: 26px; font-weight: 700">Primer encuentro</span>
-<span style="font-size: 13px; line-height: 18px; font-weight: 700; color: #E9C46A">Faltan</span>
+<svg width="34" height="34" viewBox="0 0 48 48" role="img" aria-label="Tu rosetón: cantas y oras" style="flex: none"><circle cx="24" cy="24" r="22.3" fill="#0B0806" stroke="#E2B23C" stroke-width="1.4"/><g stroke="#0B0806" stroke-width="1.5"><circle cx="24" cy="11" r="7.6" fill="#3E8A3A"/><circle cx="35.3" cy="17.5" r="7.6" fill="#2D5FB8"/><circle cx="35.3" cy="30.5" r="7.6" fill="#3E8A3A"/><circle cx="24" cy="37" r="7.6" fill="#2D5FB8"/><circle cx="12.7" cy="30.5" r="7.6" fill="#3E8A3A"/><circle cx="12.7" cy="17.5" r="7.6" fill="#2D5FB8"/></g><circle cx="24" cy="24" r="6" fill="#E2B23C" stroke="#0B0806" stroke-width="1.5"/></svg>
 </div>
 <div role="timer" aria-label="Faltan 12 días, 4 horas, 33 minutos y 8 segundos" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; text-align: center">
 <div style="padding: 6px 0; background: #240709; border-radius: 12px"><div style="font-family: Fraunces, Georgia, serif; font-size: 26px; line-height: 30px; font-weight: 700; color: #F2C75C; font-variant-numeric: tabular-nums">12</div><div style="font-size: 12px; line-height: 16px; color: #D8BFB3">días</div></div>
@@ -39,25 +35,16 @@ a{color:#F4EADB}a:hover{color:#FFFFFF}
 <div style="padding: 6px 0; background: #240709; border-radius: 12px"><div style="font-family: Fraunces, Georgia, serif; font-size: 26px; line-height: 30px; font-weight: 700; color: #F2C75C; font-variant-numeric: tabular-nums">08</div><div style="font-size: 12px; line-height: 16px; color: #D8BFB3">seg</div></div>
 </div>
 </div>
-<div style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: #1A130F">
-<div style="flex: 1; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 20px; color: #D9CCB8">
-<div style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E2B23C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span><b style="color: #F4EADB">[FECHA 1]</b> · 21:00 tu hora</span></div>
-<div style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E2B23C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5 3.6 10.2a8.6 7.6 0 0 1 16.8 0z"/><path d="M12 20.5 7.4 4.6M12 20.5V3M12 20.5l4.6-15.9"/></svg><span><b style="color: #F4EADB">Camino del río</b> · salida en el puente</span></div>
-<div style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7CC47A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span>Cantas <b style="color: #F4EADB">la melodía</b> · 2 canciones</span></div>
-<div style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E2B23C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8"/><path d="M8 3c0 6-.8 12-2.6 18H9.6L11 12"/><path d="M16 3c0 6 .8 12 2.6 18h-4.2L13 12"/><path d="M7.4 16.5v3M5.9 18h3M16.6 16.5v3M15.1 18h3"/></svg><span>Confesiones de 20:00 a 20:55</span></div>
-</div>
-<svg width="56" height="56" viewBox="0 0 48 48" aria-label="Tu rosetón: cantas y oras" role="img" style="flex: none; filter: drop-shadow(0 0 10px rgba(226,178,60,0.25))"><circle cx="24" cy="24" r="22.3" fill="#0B0806" stroke="#E2B23C" stroke-width="1.4"/><g stroke="#0B0806" stroke-width="1.5"><circle cx="24" cy="11" r="7.6" fill="#3E8A3A"/><circle cx="35.3" cy="17.5" r="7.6" fill="#2D5FB8"/><circle cx="35.3" cy="30.5" r="7.6" fill="#3E8A3A"/><circle cx="24" cy="37" r="7.6" fill="#2D5FB8"/><circle cx="12.7" cy="30.5" r="7.6" fill="#3E8A3A"/><circle cx="12.7" cy="17.5" r="7.6" fill="#2D5FB8"/></g><circle cx="24" cy="24" r="6" fill="#E2B23C" stroke="#0B0806" stroke-width="1.5"/></svg>
-</div>
+<ul style="margin: 0; padding: 0; list-style: none; background: #1A130F">
+<li style="display: flex; align-items: center; gap: 12px; padding: 13px 16px; font-size: 15px; line-height: 20px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E2B23C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>[FECHA 1] · 21:00</li>
+<li style="border-top: 1px solid #2A2019"><a href="#" style="display: flex; align-items: center; gap: 12px; padding: 13px 16px; font-size: 15px; line-height: 20px; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E2B23C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span style="flex: 1">Camino del río</span><span style="font-size: 13px; font-weight: 700; color: #BFAE97">Cómo llegar</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9C8B75" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
+<li style="border-top: 1px solid #2A2019; display: flex; align-items: center; gap: 12px; padding: 13px 16px; font-size: 15px; line-height: 20px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E2B23C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Cantas la melodía</li>
+</ul>
 </article>
 
-<div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: #2A2110; border: 1px solid #4D3B1C; border-radius: 16px">
-<span style="flex: 1; font-size: 14px; line-height: 20px; color: #E6D9C3">Tu lugar aún no está habilitado: <b style="color: #F4EADB">faltan 3 personas</b>.</span>
-<button type="button" style="flex: none; height: 40px; padding: 0 14px; border: none; border-radius: 12px; background: #E2B23C; color: #120D0A; font: 800 14px Nunito, sans-serif">Invitar</button>
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
-<a href="Ensayar.html" style="display: flex; flex-direction: column; gap: 6px; padding: 12px 14px; background: #14231A; border: 1.5px solid #3E8A3A; border-radius: 18px; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7CC47A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span style="font-size: 16px; line-height: 20px; font-weight: 800">Ensayar</span><span style="font-size: 13px; line-height: 18px; color: #BFAE97">Con la letra y tu voz de guía</span></a>
-<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 12px 14px; background: #1A130F; border: 1px solid #3A2C21; border-radius: 18px; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E2B23C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span style="font-size: 16px; line-height: 20px; font-weight: 800">Cómo llegar</span><span style="font-size: 13px; line-height: 18px; color: #BFAE97">Abre el mapa en tu móvil</span></a>
+<div style="display: flex; align-items: center; gap: 12px; padding: 4px 2px">
+<span style="flex: 1; font-size: 14px; line-height: 20px; color: #BFAE97">Faltan 3 personas en tu lugar</span>
+<button type="button" style="flex: none; height: 40px; padding: 0 16px; border: 1.5px solid #E2B23C; border-radius: 12px; background: transparent; color: #E9C46A; font: 800 14px Nunito, sans-serif">Invitar</button>
 </div>
 
 </main>
